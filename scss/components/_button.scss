@@ -1,3 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+// Style
+.exploration_button {
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  background-image: $color-gradient;
+  color: white;
+  border: none;
+}
+// Color
+$color-gradient: linear-gradient($color-secondary, $color-primary);

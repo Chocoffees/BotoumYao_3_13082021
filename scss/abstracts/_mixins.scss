@@ -1,4 +1,82 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+@mixin radius-small {
+  width: 280px;
+  height: 60px;
+  border: 1px solid transparent;
+  box-shadow: $shadow-style;
+  border-radius: 15px;
+  background-color: $colorback-light;
+  padding-bottom: $padding-size;
+}
+
+@mixin position-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 1em;
+}
+
+@mixin functions-positionElements {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  right: 40px;
+}
+
+@mixin bullet-styles {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: $color-primary;
+  color: $color-text;
+  font-size: $size-small;
+}
+
+@mixin card-styles {
+  width: 260px;
+  height: 200px;
+  border: 1px solid transparent;
+  border-radius: 10px 10px 10px;
+  box-shadow: $shadow-style;
+  margin-bottom: $padding-size;
+}
+
+@mixin photo-styles {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@mixin info-styles {
+  width: max-content;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  line-height: 1.5;
+  padding-left: $padding-size;
+}
+@mixin name-styles {
+  font-size: $size-medium;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+@mixin place-styles {
+  font-size: $size-medium;
+  margin: 0;
+}

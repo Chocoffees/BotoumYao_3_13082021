@@ -3,6 +3,7 @@
  */
 body {
   font-family: "Roboto";
+  margin: 0px;
 }
 
 header {
@@ -34,5 +35,17 @@ header {
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
   border: none;
+}
+
+.like_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  left: 100px;
+  bottom: 60px;
 }
 /*# sourceMappingURL=main.css.map */

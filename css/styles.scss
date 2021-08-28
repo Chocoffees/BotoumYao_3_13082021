@@ -1,5 +1,12 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
 body {
   font-family: "roboto";
+  margin: 0px;
 }
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
@@ -14,9 +21,11 @@ $color-text: white;
 $color-shadow: rgba(99, 99, 99, 0.2);
 $shadow-style: $color-shadow 2px 5px 7px 2px;
 
+$size-xs: x-small;
 $size-small: small;
 $size-medium: 0.9em;
 $size-large: 1.2em;
+$size-xl: 1.8em;
 $font-family: "shrikhand";
 
 $padding-size: 15px;
@@ -32,7 +41,7 @@ $position-bottom: bottom;
 }
 
 @mixin radius-small {
-  width: 280px;
+  width: 300px;
   height: 60px;
   border: 1px solid transparent;
   box-shadow: $shadow-style;
@@ -46,8 +55,10 @@ $position-bottom: bottom;
   display: grid;
   justify-content: center;
   align-content: center;
+  justify-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
+  row-gap: 1em;
 }
 
 @mixin functions-positionElements {
@@ -70,14 +81,14 @@ $position-bottom: bottom;
 }
 
 @mixin card-styles {
-  width: 260px;
+  width: 300px;
   height: 200px;
   border: 1px solid transparent;
   border-radius: 10px 10px 10px;
   box-shadow: $shadow-style;
   margin-bottom: $padding-size;
+  text-decoration: none;
 }
-
 @mixin photo-styles {
   width: 100%;
   height: 140px;
@@ -97,11 +108,13 @@ $position-bottom: bottom;
 @mixin name-styles {
   font-size: $size-medium;
   font-weight: bold;
+  color: $colorback-dark;
   margin-top: 5px;
   margin-bottom: 0;
 }
 @mixin place-styles {
   font-size: $size-medium;
+  color: $colorback-dark;
   margin: 0;
 }
 
@@ -133,7 +146,7 @@ section.location {
 }
 section.exploration {
   width: 100%;
-  height: 250px;
+  height: 230px;
   @include flex-center();
   flex-direction: column;
   text-align: center;
@@ -142,11 +155,13 @@ section.exploration {
 }
 .exploration_introduce {
   font-size: $size-large;
+  max-width: 200px;
   margin: 0;
 }
 .exploration_discover {
   font-size: $size-medium;
   color: $colorback-dark;
+  max-width: 300px;
 }
 .exploration_button {
   border-radius: 30px;
@@ -159,12 +174,13 @@ section.exploration {
 }
 section.functions {
   @include position-grid();
-  padding-left: $padding-size;
-  padding-bottom: 30px;
+  padding: $padding-size $padding-size 30px $padding-size;
 }
 .functions h2 {
+  width: 290px;
   font-size: $size-large;
   padding-top: 30px;
+  margin: 0px;
 }
 .choose {
   @include radius-small();
@@ -201,6 +217,15 @@ section.functions {
 .taste {
   @include radius-small();
   @include flex-center();
+  &:active {
+    background-color: lighten($color-primary, $amount: 35%);
+    &.taste_title {
+      color: black;
+      &.taste_icon {
+        color: $color-primary;
+      }
+    }
+  }
 }
 .taste_elements {
   @include functions-positionElements();
@@ -218,11 +243,12 @@ section.restaurant {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   background-color: $colorback-light;
-  padding-left: $padding-size;
   padding-bottom: 30px;
 }
 .restaurant h2 {
+  width: 290px;
   font-size: $size-large;
   padding-top: 30px;
 }
@@ -242,15 +268,49 @@ section.restaurant {
 .card_place {
   @include place-styles();
 }
-.select_button {
+.like_button {
+  display: flex;
+  align-items: center;
   position: relative;
-  left: 200px;
-  bottom: 50px;
-  font-size: large;
-  background-color: transparent;
-  cursor: pointer;
+  left: 100px;
+  bottom: 60px;
+}
+svg {
+  width: 20px;
+  height: 20px;
 }
 .card_photo2 {
   @include photo-styles();
   object-position: $position-center;
+}
+footer {
+  height: 180px;
+  padding: $padding-size $padding-size;
+  background-color: $colorback-dark;
+}
+.logo_small {
+  width: 100px;
+  font-family: $font-family;
+  font-size: $size-large;
+  font-weight: normal;
+  color: $color-text;
+}
+.footer_elements {
+  font-size: $size-small;
+  font-family: "roboto";
+  color: $color-text;
+  list-style-type: none;
+  line-height: 20px;
+  padding-left: 0px;
+}
+.footer_icon {
+  font-size: $size-xs;
+  padding-right: 10px;
+}
+.fas-fa-hands-helping {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  color: $color-text;
 }

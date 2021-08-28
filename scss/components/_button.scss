@@ -13,3 +13,11 @@
 }
 // Color
 $color-gradient: linear-gradient($color-secondary, $color-primary);
+
+.like_button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 100px;
+  bottom: 60px;
+}

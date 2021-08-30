@@ -2,22 +2,80 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
+// Color
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+$color-gradient: linear-grrgb(43, 31, 31)($color-secondary, $color-primary);
+$colorback-light: lighten(#f2f2f2, 2%);
+
 // Style
+// Exploration section
 .exploration_button {
   border-radius: 30px;
   width: 180px;
   height: 40px;
   background-image: $color-gradient;
-  color: white;
   border: none;
+  color: $color-text;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 }
-// Color
-$color-gradient: linear-gradient($color-secondary, $color-primary);
 
+// Fuctions section
+.choose {
+  @include radius-small();
+  @include flex-center();
+  &:hover {
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
+}
+
+.compose {
+  @include radius-small();
+  @include flex-center();
+  &:hover {
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
+}
+
+.taste {
+  @include radius-small();
+  @include flex-center();
+  &:hover {
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
+}
+
+// Restaurant section
 .like_button {
   display: flex;
   align-items: center;
   position: relative;
-  left: 100px;
+  left: 120px;
   bottom: 60px;
+  cursor: pointer;
+}
+
+.likeStyle_button {
+  fill: $colorback-light;
+  stroke: black;
+  stroke-width: 20;
+  &:active {
+    fill: $colorback-light;
+    opacity: 1;
+    stroke: unset;
+    animation: fadeinbackground 1.5s;
+  }
+  @keyframes fadeinbackground {
+    from {
+      fill: $color-primary;
+    }
+    to {
+      fill: $color-secondary;
+    }
+  }
 }

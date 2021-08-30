@@ -20,6 +20,7 @@ $color-text: white;
 
 $color-shadow: rgba(99, 99, 99, 0.2);
 $shadow-style: $color-shadow 2px 5px 7px 2px;
+$color-darkShadow: $colorback-dark;
 
 $size-xs: x-small;
 $size-small: small;
@@ -57,7 +58,7 @@ $position-bottom: bottom;
   align-content: center;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 1em;
 }
 
@@ -66,9 +67,10 @@ $position-bottom: bottom;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 60px;
   position: relative;
-  right: 40px;
+  border: 1px solid transparent;
+  border-radius: 15px;
 }
 
 @mixin bullet-styles {
@@ -78,6 +80,8 @@ $position-bottom: bottom;
   background-color: $color-primary;
   color: $color-text;
   font-size: $size-small;
+  position: absolute;
+  right: 290px;
 }
 
 @mixin card-styles {
@@ -117,7 +121,17 @@ $position-bottom: bottom;
   color: $colorback-dark;
   margin: 0;
 }
-
+@mixin enabled {
+  &:hover,
+  :active {
+    background-color: lighten($color-primary, 35%);
+    .functionEnabled_icon {
+      color: $color-primary;
+      opacity: inherit;
+    }
+  }
+}
+// ----- Header -----
 header {
   width: 100%;
   height: 50px;
@@ -127,6 +141,7 @@ header {
   width: 150px;
   height: max-content;
 }
+// ----- Location section -----
 section.location {
   width: 100%;
   @include flex-center();
@@ -144,6 +159,7 @@ section.location {
   font-weight: bold;
   color: $colorback-dark;
 }
+// ----- Exploration section -----
 section.exploration {
   width: 100%;
   height: 230px;
@@ -171,7 +187,11 @@ section.exploration {
   border: none;
   color: $color-text;
   cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 }
+// ----- Functions section -----
 section.functions {
   @include position-grid();
   padding: $padding-size $padding-size 30px $padding-size;
@@ -182,12 +202,17 @@ section.functions {
   padding-top: 30px;
   margin: 0px;
 }
+// ----- Function 1 -----
 .choose {
   @include radius-small();
   @include flex-center();
+  &:hover {
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
 }
 .choose_elements {
   @include functions-positionElements();
+  @include enabled();
 }
 .bullets {
   @include flex-center();
@@ -200,12 +225,17 @@ section.functions {
   font-size: $size-small;
   font-weight: bold;
 }
+// ----- Function 2 -----
 .compose {
   @include radius-small();
   @include flex-center();
+  &:hover {
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
 }
 .compose_elements {
   @include functions-positionElements();
+  @include enabled();
 }
 .compose_icon {
   opacity: 0.5;
@@ -214,21 +244,17 @@ section.functions {
   font-size: $size-small;
   font-weight: bold;
 }
+// ----- Function 3 -----
 .taste {
   @include radius-small();
   @include flex-center();
-  &:active {
-    background-color: lighten($color-primary, $amount: 35%);
-    &.taste_title {
-      color: black;
-      &.taste_icon {
-        color: $color-primary;
-      }
-    }
+  &:hover {
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
   }
 }
 .taste_elements {
   @include functions-positionElements();
+  @include enabled();
 }
 .taste_icon {
   opacity: 0.5;
@@ -237,6 +263,7 @@ section.functions {
   font-size: $size-small;
   font-weight: bold;
 }
+// ----- Restaurants section -----
 section.restaurant {
   width: auto;
   height: auto;
@@ -254,6 +281,9 @@ section.restaurant {
 }
 .card {
   @include card-styles();
+  &:hover {
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
 }
 .card_photo1 {
   @include photo-styles();
@@ -268,23 +298,58 @@ section.restaurant {
 .card_place {
   @include place-styles();
 }
+.card_new {
+  @include flex-center();
+  width: 60px;
+  height: 20px;
+  border: 1px solid transparent;
+  border-radius: 2px 2px;
+  background-color: $color-tertiary;
+  color: darken($color-tertiary, 40%);
+  font-size: $size-xs;
+  font-weight: bold;
+  position: relative;
+  bottom: 200px;
+  left: 230px;
+}
 .like_button {
   display: flex;
   align-items: center;
   position: relative;
-  left: 100px;
+  left: 120px;
   bottom: 60px;
+  cursor: pointer;
 }
 svg {
-  width: 20px;
+  width: 22px;
   height: 20px;
+}
+.likeStyle_button {
+  fill: $colorback-light;
+  stroke: black;
+  stroke-width: 20;
+  &:active {
+    fill: $colorback-light;
+    opacity: 1;
+    stroke: unset;
+    animation: fadeinbackground 1.5s;
+  }
+  @keyframes fadeinbackground {
+    from {
+      fill: $color-primary;
+    }
+    to {
+      fill: $color-secondary;
+    }
+  }
 }
 .card_photo2 {
   @include photo-styles();
   object-position: $position-center;
 }
+// ----- Footer -----
 footer {
-  height: 180px;
+  height: 150px;
   padding: $padding-size $padding-size;
   background-color: $colorback-dark;
 }

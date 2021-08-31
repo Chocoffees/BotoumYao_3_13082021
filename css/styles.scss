@@ -8,6 +8,11 @@ body {
   font-family: "roboto";
   margin: 0px;
 }
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
@@ -378,4 +383,34 @@ footer {
 a {
   text-decoration: none;
   color: $color-text;
+}
+
+// ----- Loader -----
+.loader {
+  @include flex-center();
+  width: 100px;
+  height: 100px;
+  border: 3px solid $color-secondary;
+  border-radius: 50%;
+  border-top-color: $color-primary;
+  border-right-color: $color-secondary;
+  border-bottom-color: $color-tertiary;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  cursor: wait;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader_icon {
+  width: 50px;
+  height: 40px;
+  fill: $color-primary;
+}
+.container {
+  display: none;
 }

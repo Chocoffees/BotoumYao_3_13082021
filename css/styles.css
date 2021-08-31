@@ -10,6 +10,11 @@ body {
   margin: 0px;
 }
 
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
 header {
   width: 100%;
   height: 50px;
@@ -551,5 +556,54 @@ footer {
 a {
   text-decoration: none;
   color: white;
+}
+
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #ff79da;
+  border-radius: 50%;
+  border-top-color: #9356dc;
+  border-right-color: #ff79da;
+  border-bottom-color: #99e2d0;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  cursor: wait;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader_icon {
+  width: 50px;
+  height: 40px;
+  fill: #9356dc;
+}
+
+.container {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

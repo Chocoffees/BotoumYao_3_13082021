@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css">
-    <!---<link rel="stylesheet" href="index.html"--->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Ohmyfood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +17,17 @@
 </head>
 
 <body>
+    <div class="loader">
+        <svg class="loader_icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="concierge-bell"
+            class="svg-inline--fa fa-concierge-bell fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512" B>
+            <path
+                d="M288 130.54V112h16c8.84 0 16-7.16 16-16V80c0-8.84-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h16v18.54C115.49 146.11 32 239.18 32 352h448c0-112.82-83.49-205.89-192-221.46zM496 384H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+            </path>
+        </svg>
+    </div>
     <div class="container">
         <header>
-
             <img class="logo_normal" src="images/ohmyfood@2x.svg" alt="Logo Ohmyfood!" />
         </header>
         <main>
@@ -139,21 +148,18 @@
                         </path>
                     </svg>
                 </div>
-    </div>
-    </div>
-    </section>
-    </main>
-    <footer>
-        <!---<a href="index.html"> inclure index.html contenant <header> et <footer> pour chaque page possible ?--->
-        <h1 class="logo_small">ohmyfood</h1>
-        <ul class="footer_elements">
-            <li><i class="fas fa-utensils footer_icon"></i>Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping footer_icon"></i>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li><a href="mailto:">Contact</a></li>
-        </ul>
-    </footer>
-    </div>
+            </section>
+        </main>
+        <footer>
+            <h1 class="logo_small">ohmyfood</h1>
+            <ul class="footer_elements">
+                <li><i class="fas fa-utensils footer_icon"></i>Proposer un restaurant</li>
+                <li><i class="fas fa-hands-helping footer_icon"></i>Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li><a href="mailto:">Contact</a></li>
+            </ul>
+        </footer>
 </body>
+</div>
 
 </html>

@@ -22,11 +22,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo_normal {
@@ -42,14 +42,14 @@ section.location {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top: 1px transparent;
   -webkit-box-shadow: inset rgba(99, 99, 99, 0.2) 0px 3px 2px 0px;
-  box-shadow: inset rgba(99, 99, 99, 0.2) 0px 3px 2px 0px;
+          box-shadow: inset rgba(99, 99, 99, 0.2) 0px 3px 2px 0px;
   background-color: #ededed;
 }
 
@@ -72,15 +72,15 @@ section.exploration {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   line-height: 1.2em;
   background-color: #f7f7f7;
@@ -102,13 +102,7 @@ section.exploration {
   border-radius: 30px;
   width: 180px;
   height: 40px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#ff79da),
-    to(#9356dc)
-  );
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
   color: white;
@@ -123,15 +117,15 @@ section.functions {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   justify-items: center;
   -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 1em;
   padding: 15px 15px 30px 15px;
 }
@@ -144,11 +138,11 @@ section.functions {
 }
 
 .choose {
-  width: 300px;
+  width: 280px;
   height: 60px;
   border: 1px solid transparent;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
-  box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+          box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
   border-radius: 15px;
   background-color: #f7f7f7;
   margin: 0;
@@ -157,16 +151,16 @@ section.functions {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .choose:hover {
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
-  box-shadow: #2e2c2c 2px 5px 7px 2px;
+          box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
 .choose_elements {
@@ -174,11 +168,11 @@ section.functions {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 60px;
   position: relative;
@@ -202,11 +196,11 @@ section.functions {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 20px;
   height: 20px;
   border-radius: 20px;
@@ -214,7 +208,7 @@ section.functions {
   color: white;
   font-size: small;
   position: absolute;
-  right: 290px;
+  right: 270px;
 }
 
 .choose_icon {
@@ -227,11 +221,11 @@ section.functions {
 }
 
 .compose {
-  width: 300px;
+  width: 280px;
   height: 60px;
   border: 1px solid transparent;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
-  box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+          box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
   border-radius: 15px;
   background-color: #f7f7f7;
   margin: 0;
@@ -240,16 +234,16 @@ section.functions {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .compose:hover {
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
-  box-shadow: #2e2c2c 2px 5px 7px 2px;
+          box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
 .compose_elements {
@@ -257,11 +251,11 @@ section.functions {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 60px;
   position: relative;
@@ -290,11 +284,11 @@ section.functions {
 }
 
 .taste {
-  width: 300px;
+  width: 280px;
   height: 60px;
   border: 1px solid transparent;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
-  box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+          box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
   border-radius: 15px;
   background-color: #f7f7f7;
   margin: 0;
@@ -303,16 +297,16 @@ section.functions {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .taste:hover {
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
-  box-shadow: #2e2c2c 2px 5px 7px 2px;
+          box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
 .taste_elements {
@@ -320,11 +314,11 @@ section.functions {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 60px;
   position: relative;
@@ -359,15 +353,15 @@ section.restaurant {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f7f7f7;
   padding-bottom: 30px;
 }
@@ -384,25 +378,25 @@ section.restaurant {
   border: 1px solid transparent;
   border-radius: 10px 10px 10px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
-  box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+          box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
   margin-bottom: 15px;
   text-decoration: none;
 }
 
 .card:hover {
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
-  box-shadow: #2e2c2c 2px 5px 7px 2px;
+          box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
 .card_photo1 {
   width: 100%;
   height: 140px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   -o-object-position: bottom;
-  object-position: bottom;
+     object-position: bottom;
 }
 
 .card_info {
@@ -415,10 +409,10 @@ section.restaurant {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   line-height: 1.5;
   padding-left: 15px;
 }
@@ -442,11 +436,11 @@ section.restaurant {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 60px;
   height: 20px;
   border: 1px solid transparent;
@@ -465,8 +459,8 @@ section.restaurant {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   left: 120px;
   bottom: 60px;
@@ -489,7 +483,7 @@ svg {
   opacity: 1;
   stroke: unset;
   -webkit-animation: fadeinbackground 1.5s;
-  animation: fadeinbackground 1.5s;
+          animation: fadeinbackground 1.5s;
 }
 
 @-webkit-keyframes fadeinbackground {
@@ -514,11 +508,11 @@ svg {
   width: 100%;
   height: 140px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
 }
 
 footer {
@@ -563,11 +557,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100px;
   height: 100px;
   border: 3px solid #ff79da;
@@ -576,7 +570,7 @@ a {
   border-right-color: #ff79da;
   border-bottom-color: #99e2d0;
   -webkit-animation: spin 1s linear infinite;
-  animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
   position: fixed;
   top: 30%;
   left: 35%;
@@ -586,14 +580,14 @@ a {
 @-webkit-keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -605,5 +599,255 @@ a {
 
 .container {
   display: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.menu_header {
+  width: auto;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo_normal {
+  width: 150px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.back_button {
+  width: 30px;
+  height: 30px;
+  color: black;
+  position: relative;
+  bottom: 35px;
+  padding-left: 20px;
+}
+
+section.presentation {
+  width: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+}
+
+.presentation_photo {
+  width: auto;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.presentation_photoPortrait {
+  width: auto;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+section.menu {
+  width: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #f7f7f7;
+  padding-bottom: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  top: 220px;
+}
+
+.title {
+  width: 300px;
+  height: 30px;
+  font-size: 0.9em;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.menu_name {
+  font-family: "shrikhand";
+}
+
+.like_buttonMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.starter,
+.main,
+.dessert {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 1em;
+  padding: 15px 15px;
+}
+
+.starter h2,
+.main h2,
+.dessert h2 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: #2e2c2c;
+  font-weight: normal;
+  width: 30px;
+  height: 20px;
+  border-bottom: 3px solid #99e2d0;
+  position: relative;
+  right: 130px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.starter_info,
+.main_info,
+.dessert_info {
+  width: 280px;
+  height: 60px;
+  border: 1px solid transparent;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+          box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+  border-radius: 15px;
+  background-color: #f7f7f7;
+  margin: 0;
+  cursor: pointer;
+  padding-left: 15px;
+  background-color: white;
+}
+
+.starter_item,
+.main_item,
+.dessert_item {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #2e2c2c;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-top: 5px;
+  line-height: 1.5em;
+}
+
+.starter_accompaniment,
+.main_accompaniment,
+.dessert_accompaniment {
+  font-size: small;
+  width: 250px;
+  margin: 0;
+}
+
+.starter_pricing,
+.main_pricing,
+.dessert_pricing {
+  font-size: small;
+  font-weight: bold;
+  width: 30px;
+  position: relative;
+  left: 250px;
+  bottom: 15px;
+}
+
+.order {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0 30px 0;
+}
+
+.order_button {
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  height: 150px;
+  padding: 15px 15px;
+  background-color: #2e2c2c;
+  position: relative;
+  top: 200px;
+}
+
+.logo_small {
+  width: 100px;
+  font-family: "shrikhand";
+  font-size: 1.2em;
+  font-weight: normal;
+  color: white;
+}
+
+.footer_elements {
+  font-size: small;
+  font-family: "roboto";
+  color: white;
+  list-style-type: none;
+  line-height: 20px;
+  padding-left: 0px;
+}
+
+.footer_icon {
+  font-size: x-small;
+  padding-right: 10px;
+}
+
+.fas-fa-hands-helping {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

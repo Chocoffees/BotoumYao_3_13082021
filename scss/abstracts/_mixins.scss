@@ -1,31 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin radius-small {
-  width: 300px;
-  height: 60px;
-  border: 1px solid transparent;
-  box-shadow: $shadow-style;
-  border-radius: 15px;
-  background-color: $colorback-light;
-  padding-bottom: $padding-size;
-}
-
-@mixin position-grid {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  row-gap: 1em;
-}
 
 @mixin functions-positionElements {
   display: flex;
@@ -34,7 +9,6 @@
   width: 100%;
   height: 60px;
   position: relative;
-  right: 40px;
   border: 1px solid transparent;
   border-radius: 15px;
 }
@@ -47,7 +21,7 @@
   color: $color-text;
   font-size: $size-small;
   position: absolute;
-  right: 290px;
+  right: 270px;
 }
 
 @mixin card-styles {
@@ -59,7 +33,6 @@
   margin-bottom: $padding-size;
   text-decoration: none;
 }
-
 @mixin photo-styles {
   width: 100%;
   height: 140px;
@@ -67,7 +40,6 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
 @mixin info-styles {
   width: max-content;
   height: 60px;
@@ -77,7 +49,6 @@
   line-height: 1.5;
   padding-left: $padding-size;
 }
-
 @mixin name-styles {
   font-size: $size-medium;
   font-weight: bold;
@@ -85,19 +56,64 @@
   margin-top: 5px;
   margin-bottom: 0;
 }
-
 @mixin place-styles {
   font-size: $size-medium;
   color: $colorback-dark;
   margin: 0;
 }
-
 @mixin enabled {
-  &:hover, :active {
-  background-color: lighten($color-primary, 35%);
-  .functionEnabled_icon {
+  &:hover,
+  :active {
+    background-color: lighten($color-primary, 35%);
+    .functionEnabled_icon {
       color: $color-primary;
       opacity: inherit;
     }
   }
+}
+// ----- Menus -----
+@mixin menu-styles {
+  width: auto;
+  height: max-content;
+  background-color: $colorback-light;
+  padding-bottom: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  top: 220px;
+}
+@mixin sectionTitle-styles {
+  text-transform: uppercase;
+  font-size: $size-medium;
+  color: $colorback-dark;
+  font-weight: normal;
+  width: 30px;
+  height: 20px;
+  border-bottom: 3px solid $color-tertiary;
+  position: relative;
+  right: 130px;
+  align-self: flex-end;
+}
+@mixin accompaniement-styles {
+  font-size: $size-small;
+  width: 250px;
+  margin: 0;
+}
+@mixin pricing-styles {
+  font-size: $size-small;
+  font-weight: bold;
+  width: 30px;
+  position: relative;
+  left: 250px;
+  bottom: 15px;
+}
+// ----- Buttons -----
+@mixin gradient-button {
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  background-image: $color-gradient;
+  border: none;
+  color: $color-text;
+  cursor: pointer;
 }

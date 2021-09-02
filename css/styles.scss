@@ -47,7 +47,7 @@ $position-bottom: bottom;
 }
 
 @mixin radius-small {
-  width: 300px;
+  width: 280px;
   height: 60px;
   border: 1px solid transparent;
   box-shadow: $shadow-style;
@@ -86,7 +86,7 @@ $position-bottom: bottom;
   color: $color-text;
   font-size: $size-small;
   position: absolute;
-  right: 290px;
+  right: 270px;
 }
 
 @mixin card-styles {
@@ -135,6 +135,52 @@ $position-bottom: bottom;
       opacity: inherit;
     }
   }
+}
+// ----- Menus -----
+@mixin menu-styles {
+  width: auto;
+  height: max-content;
+  background-color: $colorback-light;
+  padding-bottom: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  top: 220px;
+}
+@mixin sectionTitle-styles {
+  text-transform: uppercase;
+  font-size: $size-medium;
+  color: $colorback-dark;
+  font-weight: normal;
+  width: 30px;
+  height: 20px;
+  border-bottom: 3px solid $color-tertiary;
+  position: relative;
+  right: 130px;
+  align-self: flex-end;
+}
+@mixin accompaniement-styles {
+  font-size: $size-small;
+  width: 250px;
+  margin: 0;
+}
+@mixin pricing-styles {
+  font-size: $size-small;
+  font-weight: bold;
+  width: 30px;
+  position: relative;
+  left: 250px;
+  bottom: 15px;
+}
+// ----- Buttons -----
+@mixin gradient-button {
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  background-image: $color-gradient;
+  border: none;
+  color: $color-text;
+  cursor: pointer;
 }
 // ----- Header -----
 header {
@@ -185,13 +231,7 @@ section.exploration {
   max-width: 300px;
 }
 .exploration_button {
-  border-radius: 30px;
-  width: 180px;
-  height: 40px;
-  background-image: $color-gradient;
-  border: none;
-  color: $color-text;
-  cursor: pointer;
+  @include gradient-button();
   &:hover {
     opacity: 0.7;
   }
@@ -413,4 +453,154 @@ a {
 }
 .container {
   display: none;
+}
+
+// ----- Menu La palette du goût -----
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+// ----- Header -----
+.menu_header {
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo_normal {
+  width: 150px;
+  height: max-content;
+}
+.back_button {
+  width: 30px;
+  height: 30px;
+  color: black;
+  position: relative;
+  bottom: 35px;
+  padding-left: 20px;
+}
+// ----- Presentation section -----
+section.presentation {
+  width: auto;
+  height: max-content;
+  position: absolute;
+}
+.presentation_photo {
+  width: auto;
+  height: 250px;
+  object-fit: cover;
+}
+.presentation_photoPortrait {
+  width: auto;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+
+// ----- Menu section -----
+section.menu {
+  @include menu_styles();
+}
+.title {
+  width: 300px;
+  height: 30px;
+  font-size: $size-medium;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: $padding-size;
+  margin-bottom: 5px;
+}
+.menu_name {
+  font-family: "shrikhand";
+}
+.like_buttonMenu {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+// ----- Starter/Main/Dessert -----
+.starter,
+.main,
+.dessert {
+  @include position-grid();
+  padding: $padding-size $padding-size;
+}
+.starter h2,
+.main h2,
+.dessert h2 {
+  @include sectionTitle-styles();
+}
+.starter_info,
+.main_info,
+.dessert_info {
+  @include radius-small();
+  padding-left: $padding-size;
+  background-color: white;
+}
+.starter_item,
+.main_item,
+.dessert_item {
+  @include name-styles();
+  padding-top: 5px;
+  line-height: 1.5em;
+}
+.starter_accompaniment,
+.main_accompaniment,
+.dessert_accompaniment {
+  @include accompaniement-styles();
+}
+.starter_pricing,
+.main_pricing,
+.dessert_pricing {
+  @include pricing-styles();
+}
+// ----- Order button -----
+.order {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+}
+.order_button {
+  @include gradient-button();
+}
+// ----- Footer -----
+footer {
+  height: 150px;
+  padding: $padding-size $padding-size;
+  background-color: $colorback-dark;
+  position: relative;
+  top: 200px;
+}
+.logo_small {
+  width: 100px;
+  font-family: $font-family;
+  font-size: $size-large;
+  font-weight: normal;
+  color: $color-text;
+}
+.footer_elements {
+  font-size: $size-small;
+  font-family: "roboto";
+  color: $color-text;
+  list-style-type: none;
+  line-height: 20px;
+  padding-left: 0px;
+}
+.footer_icon {
+  font-size: $size-xs;
+  padding-right: 10px;
+}
+.fas-fa-hands-helping {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  color: $color-text;
 }

@@ -482,8 +482,12 @@ svg {
   fill: #f7f7f7;
   opacity: 1;
   stroke: unset;
-  -webkit-animation: fadeinbackground 1.5s;
-          animation: fadeinbackground 1.5s;
+  -webkit-animation: fadeinbackground 1.2s;
+          animation: fadeinbackground 1.2s;
+}
+
+.likeStyle_button:active:target {
+  fill: #ff79da;
 }
 
 @-webkit-keyframes fadeinbackground {
@@ -515,7 +519,7 @@ svg {
      object-position: center;
 }
 
-footer {
+.home_footer {
   height: 150px;
   padding: 15px 15px;
   background-color: #2e2c2c;
@@ -637,27 +641,28 @@ a {
 }
 
 section.presentation {
-  width: auto;
+  width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   position: absolute;
+  top: 50px;
 }
 
 .presentation_photo {
-  width: auto;
+  width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .presentation_photoPortrait {
-  width: auto;
+  width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
 }
 
 section.menu {
@@ -670,26 +675,32 @@ section.menu {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   position: relative;
-  top: 220px;
+  top: 200px;
 }
 
 .title {
-  width: 300px;
-  height: 30px;
+  width: auto;
+  height: 50px;
   font-size: 0.9em;
   font-weight: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-left: 15px;
-  margin-bottom: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 15px 0 15px;
 }
 
 .menu_name {
   font-family: "shrikhand";
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0;
 }
 
 .like_buttonMenu {
@@ -700,8 +711,7 @@ section.menu {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  left: 20px;
-  top: 20px;
+  height: 32px;
   cursor: pointer;
 }
 
@@ -812,7 +822,7 @@ section.menu {
   cursor: pointer;
 }
 
-footer {
+.menu_footer {
   height: 150px;
   padding: 15px 15px;
   background-color: #2e2c2c;
@@ -849,5 +859,95 @@ footer {
 a {
   text-decoration: none;
   color: white;
+}
+
+.anime {
+  -webkit-animation: animeProgress 0.5s;
+          animation: animeProgress 0.5s;
+}
+
+@-webkit-keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anime_progress {
+  -webkit-animation: animeProgress 1.5s;
+          animation: animeProgress 1.5s;
+}
+
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anime_progressNd {
+  -webkit-animation: animeProgress 2.5s;
+          animation: animeProgress 2.5s;
+}
+
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anime_progressRd {
+  -webkit-animation: animeProgress 3s;
+          animation: animeProgress 3s;
+}
+
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#addToOrder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 57px;
+  border: 3px solid transparent;
+  background-color: #99e2d0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  left: 230px;
+  bottom: 64px;
+}
+
+.checkOrder {
+  fill: #f7f7f7;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -145,7 +145,7 @@ $position-bottom: bottom;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   position: relative;
-  top: 220px;
+  top: 200px;
 }
 @mixin sectionTitle-styles {
   text-transform: uppercase;
@@ -377,7 +377,10 @@ svg {
     fill: $colorback-light;
     opacity: 1;
     stroke: unset;
-    animation: fadeinbackground 1.5s;
+    animation: fadeinbackground 1.2s;
+    &:target{
+      fill: $color-secondary;
+    }
   }
   @keyframes fadeinbackground {
     from {
@@ -393,7 +396,7 @@ svg {
   object-position: $position-center;
 }
 // ----- Footer -----
-footer {
+.home_footer {
   height: 150px;
   padding: $padding-size $padding-size;
   background-color: $colorback-dark;
@@ -482,20 +485,21 @@ a {
 }
 // ----- Presentation section -----
 section.presentation {
-  width: auto;
+  width: 100%;
   height: max-content;
   position: absolute;
+  top: 50px;
 }
 .presentation_photo {
-  width: auto;
+  width: 100%;
   height: 250px;
   object-fit: cover;
 }
 .presentation_photoPortrait {
-  width: auto;
+  width: 100%;
   height: 250px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
 }
 
 // ----- Menu section -----
@@ -503,24 +507,25 @@ section.menu {
   @include menu_styles();
 }
 .title {
-  width: 300px;
-  height: 30px;
+  width: auto;
+  height: 50px;
   font-size: $size-medium;
   font-weight: normal;
   display: flex;
-  justify-content: space-evenly;
-  padding-left: $padding-size;
-  margin-bottom: 5px;
-}
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-size $padding-size 0 $padding-size;
+  }
 .menu_name {
   font-family: "shrikhand";
+  height: max-content;
+  margin: 0;
 }
 .like_buttonMenu {
   display: flex;
   align-items: center;
   position: relative;
-  left: 20px;
-  top: 20px;
+  height: 32px;
   cursor: pointer;
 }
 // ----- Starter/Main/Dessert -----
@@ -571,7 +576,7 @@ section.menu {
   @include gradient-button();
 }
 // ----- Footer -----
-footer {
+.menu_footer {
   height: 150px;
   padding: $padding-size $padding-size;
   background-color: $colorback-dark;
@@ -603,4 +608,64 @@ footer {
 a {
   text-decoration: none;
   color: $color-text;
+}
+.anime {
+  animation: animeProgress 0.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anime_progress {
+  animation: animeProgress 1.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anime_progressNd {
+  animation: animeProgress 2.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anime_progressRd {
+  animation: animeProgress 3s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#addToOrder {
+  @include flex-center();
+  width: 50px;
+  height: 60px;
+  border: 3px solid transparent;
+  background-color: $color-tertiary;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  left: 230px;
+  bottom: 64px;
+}
+.checkOrder {
+  fill: $colorback-lightà;
 }

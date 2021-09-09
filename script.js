@@ -1,9 +1,11 @@
-setTimeout(displaySite, 2000);
+$(window).on('load', function() {
+    setTimeout(displaySite, 2000);
 
-/**
- * Hide loader and display the content.
- */
-function displaySite() {
-    $(".loader").hide();
-    $('.container').show();
-}
+    /**
+     * Hide loader and display the content.
+     */
+    function displaySite() {
+        $(".loader").hide();
+        $('.container').show();
+    }
+});

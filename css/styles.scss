@@ -182,6 +182,21 @@ $position-bottom: bottom;
   color: $color-text;
   cursor: pointer;
 }
+// ----- Order -----
+@mixin validOrder {
+  display: block;
+  animation: appear 0.5s;
+  animation-iteration-count: 1;
+}
+@keyframes appear {
+  from {
+    margin-left: 200%;
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 // ----- Header -----
 header {
   width: 100%;
@@ -378,7 +393,7 @@ svg {
     opacity: 1;
     stroke: unset;
     animation: fadeinbackground 1.2s;
-    &:target{
+    &:target {
       fill: $color-secondary;
     }
   }
@@ -515,7 +530,7 @@ section.menu {
   justify-content: space-between;
   align-items: center;
   padding: $padding-size $padding-size 0 $padding-size;
-  }
+}
 .menu_name {
   font-family: "shrikhand";
   height: max-content;
@@ -546,6 +561,7 @@ section.menu {
   @include radius-small();
   padding-left: $padding-size;
   background-color: white;
+  white-space: nowrap;
 }
 .starter_item,
 .main_item,
@@ -558,6 +574,9 @@ section.menu {
 .main_accompaniment,
 .dessert_accompaniment {
   @include accompaniement-styles();
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .starter_pricing,
 .main_pricing,
@@ -609,6 +628,7 @@ a {
   text-decoration: none;
   color: $color-text;
 }
+// ----- Appearance item -----
 .anime {
   animation: animeProgress 0.5s;
 }
@@ -653,7 +673,8 @@ a {
     opacity: 1;
   }
 }
-
+// ----- Order -----
+// ----- Elements appearance if ready to order -----
 #addToOrder {
   @include flex-center();
   width: 50px;
@@ -665,7 +686,38 @@ a {
   position: relative;
   left: 230px;
   bottom: 64px;
+  display: none;
 }
 .checkOrder {
-  fill: $colorback-lightà;
+  fill: $colorback-light;
+}
+.starter_info:hover > .starter_pricing {
+  left: 180px;
+  transition: 0.5s ease;
+}
+.main_info:hover > .main_pricing {
+  left: 180px;
+  transition: 0.5s ease;
+}
+.dessert_info:hover > .dessert_pricing {
+  left: 180px;
+  transition: 0.5s ease;
+}
+.starter_info:hover > .starter_accompaniment {
+  width: 180px;
+}
+.main_info:hover > .main_accompaniment {
+  width: 180px;
+}
+.dessert_info:hover > .dessert_accompaniment {
+  width: 180px;
+}
+.starter_info:hover > #addToOrder {
+  @include validOrder();
+}
+.main_info:hover > #addToOrder {
+  @include validOrder();
+}
+.dessert_info:hover > #addToOrder {
+  @include validOrder();
 }

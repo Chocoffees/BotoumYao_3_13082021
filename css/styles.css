@@ -15,6 +15,26 @@ body {
   margin: auto;
 }
 
+@-webkit-keyframes appear {
+  from {
+    margin-left: 200%;
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    margin-left: 200%;
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 header {
   width: 100%;
   height: 50px;
@@ -764,6 +784,7 @@ section.menu {
   cursor: pointer;
   padding-left: 15px;
   background-color: white;
+  white-space: nowrap;
 }
 
 .starter_item,
@@ -784,6 +805,9 @@ section.menu {
   font-size: small;
   width: 250px;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .starter_pricing,
@@ -937,7 +961,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 50px;
-  height: 57px;
+  height: 60px;
   border: 3px solid transparent;
   background-color: #99e2d0;
   border-top-right-radius: 15px;
@@ -945,9 +969,64 @@ a {
   position: relative;
   left: 230px;
   bottom: 64px;
+  display: none;
 }
 
 .checkOrder {
   fill: #f7f7f7;
+}
+
+.starter_info:hover > .starter_pricing {
+  left: 180px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.main_info:hover > .main_pricing {
+  left: 180px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.dessert_info:hover > .dessert_pricing {
+  left: 180px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.starter_info:hover > .starter_accompaniment {
+  width: 180px;
+}
+
+.main_info:hover > .main_accompaniment {
+  width: 180px;
+}
+
+.dessert_info:hover > .dessert_accompaniment {
+  width: 180px;
+}
+
+.starter_info:hover > #addToOrder {
+  display: block;
+  -webkit-animation: appear 0.5s;
+          animation: appear 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.main_info:hover > #addToOrder {
+  display: block;
+  -webkit-animation: appear 0.5s;
+          animation: appear 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.dessert_info:hover > #addToOrder {
+  display: block;
+  -webkit-animation: appear 0.5s;
+          animation: appear 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 /*# sourceMappingURL=styles.css.map */

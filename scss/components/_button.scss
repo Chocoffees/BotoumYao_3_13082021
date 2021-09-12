@@ -7,11 +7,35 @@ $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 
-$color-gradient: linear-grrgb(43, 31, 31)($color-secondary, $color-primary);
-$colorback-light: lighten(#f2f2f2, 2%);
+$color-gradient: linear-grrgb(43, 31, 31) ($color-secondary, $color-primary);
 
-// Style
-// Exploration section
+$color-text: white;
+$color-shadow: rgba(99, 99, 99, 0.2);
+$color-darkShadow: $colorback-dark;
+
+$colorback-light: lighten(#f2f2f2, 2%);
+$colorback-medium: darken(#f2f2f2, 2%);
+$colorback-dark: rgb(46, 44, 44);
+
+// Size
+$size-small: small;
+
+// Padding
+$padding-size: 15px;
+
+// - Location search button -
+.location_icon {
+  font-size: $size-small;
+  padding-right: $padding-size;
+  cursor: pointer;
+}
+.location_place {
+  font-size: $size-small;
+  font-weight: bold;
+  color: $colorback-dark;
+}
+
+// ----- Exploration section -----
 .exploration_button {
   border-radius: 30px;
   width: 180px;
@@ -25,32 +49,7 @@ $colorback-light: lighten(#f2f2f2, 2%);
   }
 }
 
-// Fuctions section
-.choose {
-  @include radius-small();
-  @include flex-center();
-  &:hover {
-    box-shadow: $color-darkShadow 2px 5px 7px 2px;
-  }
-}
-
-.compose {
-  @include radius-small();
-  @include flex-center();
-  &:hover {
-    box-shadow: $color-darkShadow 2px 5px 7px 2px;
-  }
-}
-
-.taste {
-  @include radius-small();
-  @include flex-center();
-  &:hover {
-    box-shadow: $color-darkShadow 2px 5px 7px 2px;
-  }
-}
-
-// Restaurant section
+// ----- Restaurant section -----
 .like_button {
   display: flex;
   align-items: center;
@@ -59,16 +58,23 @@ $colorback-light: lighten(#f2f2f2, 2%);
   bottom: 60px;
   cursor: pointer;
 }
-
+svg {
+  width: 22px;
+  height: 20px;
+}
 .likeStyle_button {
   fill: $colorback-light;
   stroke: black;
   stroke-width: 20;
+  &:hover,
   &:active {
-    fill: $colorback-light;
+    fill: 1px $colorback-light;
     opacity: 1;
     stroke: unset;
-    animation: fadeinbackground 1.5s;
+    animation: fadeinbackground 1.2s forwards;
+    &:target {
+      fill: $color-secondary;
+    }
   }
   @keyframes fadeinbackground {
     from {

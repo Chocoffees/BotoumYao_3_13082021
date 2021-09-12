@@ -15,23 +15,25 @@ body {
   margin: auto;
 }
 
-@-webkit-keyframes appear {
+@-webkit-keyframes spin {
   from {
-    margin-left: 200%;
-    width: 0%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    width: 100%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@keyframes appear {
+@keyframes spin {
   from {
-    margin-left: 200%;
-    width: 0%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    width: 100%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -498,15 +500,15 @@ svg {
   stroke-width: 20;
 }
 
-.likeStyle_button:active {
-  fill: #f7f7f7;
+.likeStyle_button:hover, .likeStyle_button:active {
+  fill: 1px #f7f7f7;
   opacity: 1;
   stroke: unset;
-  -webkit-animation: fadeinbackground 1.2s;
-          animation: fadeinbackground 1.2s;
+  -webkit-animation: fadeinbackground 1.2s forwards;
+          animation: fadeinbackground 1.2s forwards;
 }
 
-.likeStyle_button:active:target {
+.likeStyle_button:hover:target, .likeStyle_button:active:target {
   fill: #ff79da;
 }
 
@@ -596,16 +598,12 @@ a {
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
   position: fixed;
-  top: 30%;
-  left: 35%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
   cursor: wait;
-}
-
-@-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 @keyframes spin {
@@ -960,73 +958,91 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50px;
-  height: 60px;
-  border: 3px solid transparent;
-  background-color: #99e2d0;
+  position: relative;
+  bottom: 64px;
+  left: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  position: relative;
-  left: 230px;
-  bottom: 64px;
-  display: none;
+  padding-bottom: 2px;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .checkOrder {
   fill: #f7f7f7;
 }
 
-.starter_info:hover > .starter_pricing {
-  left: 180px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.main_info:hover > .main_pricing {
-  left: 180px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.dessert_info:hover > .dessert_pricing {
-  left: 180px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.starter_info:hover > .starter_accompaniment {
-  width: 180px;
-}
-
-.main_info:hover > .main_accompaniment {
-  width: 180px;
-}
-
-.dessert_info:hover > .dessert_accompaniment {
-  width: 180px;
-}
-
 .starter_info:hover > #addToOrder {
-  display: block;
-  -webkit-animation: appear 0.5s;
-          animation: appear 0.5s;
+  background-color: #99e2d0;
+  width: 50px;
+  left: 230px;
+}
+
+.starter_info:hover > #addToOrder svg {
+  -webkit-animation: spin 0.5s linear;
+          animation: spin 0.5s linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
 
 .main_info:hover > #addToOrder {
-  display: block;
-  -webkit-animation: appear 0.5s;
-          animation: appear 0.5s;
+  background-color: #99e2d0;
+  width: 50px;
+  left: 230px;
+}
+
+.main_info:hover > #addToOrder svg {
+  -webkit-animation: spin 0.5s linear;
+          animation: spin 0.5s linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
 
 .dessert_info:hover > #addToOrder {
-  display: block;
-  -webkit-animation: appear 0.5s;
-          animation: appear 0.5s;
+  background-color: #99e2d0;
+  width: 50px;
+  left: 230px;
+}
+
+.dessert_info:hover > #addToOrder svg {
+  -webkit-animation: spin 0.5s linear;
+          animation: spin 0.5s linear;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+
+.starter_info:hover > .starter_pricing {
+  left: 195px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.main_info:hover > .main_pricing {
+  left: 195px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.dessert_info:hover > .dessert_pricing {
+  left: 195px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.starter_info:hover > .starter_accompaniment {
+  width: 195px;
+}
+
+.main_info:hover > .main_accompaniment {
+  width: 195px;
+}
+
+.dessert_info:hover > .dessert_accompaniment {
+  width: 195px;
 }
 /*# sourceMappingURL=styles.css.map */

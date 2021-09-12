@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the loader component.
+// -----------------------------------------------------------------------------
+
+// Color
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+// ----- Loader -----
+.loader {
+  @include flex-center();
+  width: 100px;
+  height: 100px;
+  border: 3px solid $color-secondary;
+  border-radius: 50%;
+  border-top-color: $color-primary;
+  border-right-color: $color-secondary;
+  border-bottom-color: $color-tertiary;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  cursor: wait;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader_icon {
+  width: 50px;
+  height: 40px;
+  fill: $color-primary;
+}

@@ -182,20 +182,18 @@ $position-bottom: bottom;
   color: $color-text;
   cursor: pointer;
 }
-// ----- Order -----
+
 @mixin validOrder {
-  display: block;
-  animation: appear 0.5s;
+  animation: spin 0.5s linear;
   animation-iteration-count: 1;
 }
-@keyframes appear {
-  from {
-    margin-left: 200%;
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 // ----- Header -----
 header {
@@ -388,11 +386,12 @@ svg {
   fill: $colorback-light;
   stroke: black;
   stroke-width: 20;
+  &:hover,
   &:active {
-    fill: $colorback-light;
+    fill: 1px $colorback-light;
     opacity: 1;
     stroke: unset;
-    animation: fadeinbackground 1.2s;
+    animation: fadeinbackground 1.2s forwards;
     &:target {
       fill: $color-secondary;
     }
@@ -455,8 +454,11 @@ a {
   border-bottom-color: $color-tertiary;
   animation: spin 1s linear infinite;
   position: fixed;
-  top: 30%;
-  left: 35%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
   cursor: wait;
 }
 @keyframes spin {
@@ -677,47 +679,64 @@ a {
 // ----- Elements appearance if ready to order -----
 #addToOrder {
   @include flex-center();
-  width: 50px;
-  height: 60px;
-  border: 3px solid transparent;
-  background-color: $color-tertiary;
+  position: relative;
+  bottom: 64px;
+  left: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  position: relative;
-  left: 230px;
-  bottom: 64px;
-  display: none;
+  padding-bottom: 2px;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
 }
 .checkOrder {
   fill: $colorback-light;
 }
-.starter_info:hover > .starter_pricing {
-  left: 180px;
-  transition: 0.5s ease;
-}
-.main_info:hover > .main_pricing {
-  left: 180px;
-  transition: 0.5s ease;
-}
-.dessert_info:hover > .dessert_pricing {
-  left: 180px;
-  transition: 0.5s ease;
-}
-.starter_info:hover > .starter_accompaniment {
-  width: 180px;
-}
-.main_info:hover > .main_accompaniment {
-  width: 180px;
-}
-.dessert_info:hover > .dessert_accompaniment {
-  width: 180px;
-}
 .starter_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+.starter_info:hover > #addToOrder svg {
   @include validOrder();
 }
 .main_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+.main_info:hover > #addToOrder svg {
   @include validOrder();
 }
 .dessert_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+.dessert_info:hover > #addToOrder svg {
   @include validOrder();
+}
+.starter_info:hover > .starter_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+.main_info:hover > .main_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+.dessert_info:hover > .dessert_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+.starter_info:hover > .starter_accompaniment {
+  width: 195px;
+}
+.main_info:hover > .main_accompaniment {
+  width: 195px;
+}
+.dessert_info:hover > .dessert_accompaniment {
+  width: 195px;
 }

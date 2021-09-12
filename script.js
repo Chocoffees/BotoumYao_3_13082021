@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-    setTimeout(displaySite, 2000);
+    setTimeout(displaySite, 3000);
 
     /**
      * Hide loader and display the content.

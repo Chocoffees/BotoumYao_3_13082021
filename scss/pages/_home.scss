@@ -11,6 +11,61 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 1em;
 }
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin radius-small {
+  width: 280px;
+  height: 60px;
+  border: 1px solid transparent;
+  box-shadow: $shadow-style;
+  border-radius: 15px;
+  background-color: $colorback-light;
+  margin: 0;
+  cursor: pointer;
+}
+@mixin gradient-button {
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  background-image: $color-gradient;
+  border: none;
+  color: $color-text;
+  box-shadow: $shadow-style;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "roboto";
+  margin: 0px;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+// ----- Header -----
+header {
+  width: 100%;
+  height: 50px;
+  @include flex-center();
+}
+.logo_normal {
+  width: 150px;
+  height: max-content;
+}
 
 // Main
 // ----- Location section -----
@@ -37,10 +92,23 @@ section.exploration {
   max-width: 200px;
   margin: 0;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  h1.exploration_introduce {
+    width: auto;
+  }
+}
 .exploration_discover {
   font-size: $size-medium;
   color: $colorback-dark;
   max-width: 300px;
+}
+@media (min-width: 568px) {
+  p.exploration_discover {
+    max-width: inherit;
+  }
+}
+.exploration_button {
+  @include gradient-button();
 }
 
 // ----- Functions section -----
@@ -54,12 +122,22 @@ section.functions {
   padding-top: 30px;
   margin: 0px;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .functions h2 {
+    width: 500px;
+  }
+}
 // ----- Function 1 -----
 .choose {
   @include radius-small();
   @include flex-center();
   &:hover {
     box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .choose {
+    width: 500px;
   }
 }
 .choose_elements {
@@ -70,19 +148,42 @@ section.functions {
   @include flex-center();
   @include bullet-styles();
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .bullets {
+    right: 490px;
+  }
+}
 .choose_icon {
   opacity: 0.5;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .choose_icon {
+    position: relative;
+    left: 20px;
+  }
 }
 .choose_title {
   font-size: $size-small;
   font-weight: bold;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .choose_title {
+    position: relative;
+    right: 50px;
+  }
+}
+
 // ----- Function 2 -----
 .compose {
   @include radius-small();
   @include flex-center();
   &:hover {
     box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .compose {
+    width: 500px;
   }
 }
 .compose_elements {
@@ -92,16 +193,34 @@ section.functions {
 .compose_icon {
   opacity: 0.5;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .compose_icon {
+    position: relative;
+    left: 20px;
+  }
+}
 .compose_title {
   font-size: $size-small;
   font-weight: bold;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .compose_title {
+    position: relative;
+    right: 50px;
+  }
+}
+
 // ----- Function 3 -----
 .taste {
   @include radius-small();
   @include flex-center();
   &:hover {
     box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .taste {
+    width: 500px;
   }
 }
 .taste_elements {
@@ -111,9 +230,21 @@ section.functions {
 .taste_icon {
   opacity: 0.5;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .taste_icon {
+    position: relative;
+    left: 20px;
+  }
+}
 .taste_title {
   font-size: $size-small;
   font-weight: bold;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .taste_title {
+    position: relative;
+    right: 50px;
+  }
 }
 
 // ----- Restaurants section -----
@@ -132,15 +263,30 @@ section.restaurant {
   font-size: $size-large;
   padding-top: 30px;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .restaurant h2 {
+    width: 500px;
+  }
+}
 .card {
   @include card-styles();
   &:hover {
     box-shadow: $color-darkShadow 2px 5px 7px 2px;
   }
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .card {
+    width: 500px;
+  }
+}
 .card_photo1 {
   @include photo-styles();
   object-position: $position-bottom;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .card_photo1 {
+    object-position: center;
+  }
 }
 .card_info {
   @include info-styles();
@@ -165,7 +311,94 @@ section.restaurant {
   bottom: 200px;
   left: 230px;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .card_new {
+    left: 400px;
+  }
+}
+.like_button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 120px;
+  bottom: 60px;
+  cursor: pointer;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .like_button {
+    left: 200px;
+  }
+}
+svg {
+  width: 22px;
+  height: 20px;
+}
+.likeStyle_button {
+  fill: $colorback-light;
+  stroke: black;
+  stroke-width: 20;
+  &:hover,
+  &:active {
+    fill: 1px $colorback-light;
+    opacity: 1;
+    stroke: unset;
+    animation: fadeinbackground 1.2s forwards;
+    &:target {
+      fill: $color-secondary;
+    }
+  }
+  @keyframes fadeinbackground {
+    from {
+      fill: $color-primary;
+    }
+    to {
+      fill: $color-secondary;
+    }
+  }
+}
 .card_photo2 {
   @include photo-styles();
   object-position: $position-center;
+}
+
+// ----- Footer -----
+.home_footer {
+  height: 150px;
+  padding: $padding-size $padding-size;
+  background-color: $colorback-dark;
+}
+.logo_small {
+  width: 100px;
+  font-family: $font-family;
+  font-size: $size-large;
+  font-weight: normal;
+  color: $color-text;
+}
+.footer_elements {
+  font-size: $size-small;
+  font-family: "roboto";
+  color: $color-text;
+  list-style-type: none;
+  line-height: 20px;
+  padding-left: 0px;
+}
+@media (min-width: 568px) and (max-width: 1024px){
+  ul.footer_elements {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.footer_icon {
+  font-size: $size-xs;
+  padding-right: 10px;
+}
+.fas-fa-hands-helping {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  color: $color-text;
 }

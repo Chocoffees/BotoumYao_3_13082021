@@ -115,5 +115,10 @@
   background-image: $color-gradient;
   border: none;
   color: $color-text;
+  box-shadow: $shadow-style;
   cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    box-shadow: $color-darkShadow 2px 5px 7px 2px;
+  }
 }

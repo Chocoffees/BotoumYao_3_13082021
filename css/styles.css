@@ -114,10 +114,22 @@ section.exploration {
   margin: 0;
 }
 
+@media (min-width: 568px) {
+  h1.exploration_introduce {
+    max-width: inherit;
+  }
+}
+
 .exploration_discover {
   font-size: 0.9em;
   color: #2e2c2c;
   max-width: 300px;
+}
+
+@media (min-width: 568px) {
+  p.exploration_discover {
+    max-width: inherit;
+  }
 }
 
 .exploration_button {
@@ -128,7 +140,15 @@ section.exploration {
   background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
   color: white;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+          box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
   cursor: pointer;
+}
+
+.exploration_button:hover {
+  opacity: 0.7;
+  -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
+          box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
 .exploration_button:hover {
@@ -159,6 +179,12 @@ section.functions {
   margin: 0px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .functions h2 {
+    width: 500px;
+  }
+}
+
 .choose {
   width: 280px;
   height: 60px;
@@ -183,6 +209,12 @@ section.functions {
 .choose:hover {
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
           box-shadow: #2e2c2c 2px 5px 7px 2px;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .choose {
+    width: 500px;
+  }
 }
 
 .choose_elements {
@@ -233,13 +265,33 @@ section.functions {
   right: 270px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .bullets {
+    right: 490px;
+  }
+}
+
 .choose_icon {
   opacity: 0.5;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .choose_icon {
+    position: relative;
+    left: 20px;
+  }
 }
 
 .choose_title {
   font-size: small;
   font-weight: bold;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .choose_title {
+    position: relative;
+    right: 50px;
+  }
 }
 
 .compose {
@@ -266,6 +318,12 @@ section.functions {
 .compose:hover {
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
           box-shadow: #2e2c2c 2px 5px 7px 2px;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .compose {
+    width: 500px;
+  }
 }
 
 .compose_elements {
@@ -300,9 +358,23 @@ section.functions {
   opacity: 0.5;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .compose_icon {
+    position: relative;
+    left: 20px;
+  }
+}
+
 .compose_title {
   font-size: small;
   font-weight: bold;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .compose_title {
+    position: relative;
+    right: 50px;
+  }
 }
 
 .taste {
@@ -329,6 +401,12 @@ section.functions {
 .taste:hover {
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
           box-shadow: #2e2c2c 2px 5px 7px 2px;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .taste {
+    width: 500px;
+  }
 }
 
 .taste_elements {
@@ -363,9 +441,23 @@ section.functions {
   opacity: 0.5;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .taste_icon {
+    position: relative;
+    left: 20px;
+  }
+}
+
 .taste_title {
   font-size: small;
   font-weight: bold;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .taste_title {
+    position: relative;
+    right: 50px;
+  }
 }
 
 section.restaurant {
@@ -394,6 +486,12 @@ section.restaurant {
   padding-top: 30px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .restaurant h2 {
+    width: 500px;
+  }
+}
+
 .card {
   width: 300px;
   height: 200px;
@@ -410,6 +508,12 @@ section.restaurant {
           box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .card {
+    width: 500px;
+  }
+}
+
 .card_photo1 {
   width: 100%;
   height: 140px;
@@ -419,6 +523,13 @@ section.restaurant {
   border-top-right-radius: 10px;
   -o-object-position: bottom;
      object-position: bottom;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .card_photo1 {
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 
 .card_info {
@@ -476,6 +587,12 @@ section.restaurant {
   left: 230px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .card_new {
+    left: 400px;
+  }
+}
+
 .like_button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,6 +604,12 @@ section.restaurant {
   left: 120px;
   bottom: 60px;
   cursor: pointer;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .like_button {
+    left: 200px;
+  }
 }
 
 svg {
@@ -562,6 +685,19 @@ svg {
   list-style-type: none;
   line-height: 20px;
   padding-left: 0px;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  ul.footer_elements {
+    width: 100%;
+    height: 50%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
 }
 
 .footer_icon {
@@ -841,7 +977,15 @@ section.menu {
   background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
   color: white;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
+          box-shadow: rgba(99, 99, 99, 0.2) 2px 5px 7px 2px;
   cursor: pointer;
+}
+
+.order_button:hover {
+  opacity: 0.7;
+  -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
+          box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
 .menu_footer {
@@ -969,8 +1113,8 @@ a {
   overflow: hidden;
   width: 0;
   height: 100%;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .checkOrder {

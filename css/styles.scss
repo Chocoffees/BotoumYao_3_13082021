@@ -534,7 +534,7 @@ svg {
   line-height: 20px;
   padding-left: 0px;
 }
-@media (min-width: 568px) and (max-width: 1024px){
+@media (min-width: 568px) and (max-width: 1024px) {
   ul.footer_elements {
     width: 100%;
     height: 50%;
@@ -670,6 +670,13 @@ section.menu {
 .dessert h2 {
   @include sectionTitle-styles();
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter h2,
+  .main h2,
+  .dessert h2 {
+    right: 235px;
+  }
+}
 .starter_info,
 .main_info,
 .dessert_info {
@@ -677,6 +684,13 @@ section.menu {
   padding-left: $padding-size;
   background-color: white;
   white-space: nowrap;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info,
+  .main_info,
+  .dessert_info {
+    width: 500px;
+  }
 }
 .starter_item,
 .main_item,
@@ -698,13 +712,20 @@ section.menu {
 .dessert_pricing {
   @include pricing-styles();
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_pricing,
+  .main_pricing,
+  .dessert_pricing {
+    left: 450px;
+  }
+}
 // ----- Order button -----
 .order {
   width: 100%;
   height: max-content;
   display: flex;
   justify-content: center;
-  margin: 30px 0 30px 0;
+  margin-top: 30px;
 }
 .order_button {
   @include gradient-button();
@@ -813,6 +834,11 @@ a {
   width: 50px;
   left: 230px;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > #addToOrder {
+    left: 450px;
+  }
+}
 .starter_info:hover > #addToOrder svg {
   @include validOrder();
 }
@@ -820,6 +846,11 @@ a {
   background-color: $color-tertiary;
   width: 50px;
   left: 230px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > #addToOrder {
+    left: 450px;
+  }
 }
 .main_info:hover > #addToOrder svg {
   @include validOrder();
@@ -829,6 +860,11 @@ a {
   width: 50px;
   left: 230px;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > #addToOrder {
+    left: 450px;
+  }
+}
 .dessert_info:hover > #addToOrder svg {
   @include validOrder();
 }
@@ -836,20 +872,50 @@ a {
   left: 195px;
   transition: 0.5s ease;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > .starter_pricing {
+    left: 400px;
+  }
+}
 .main_info:hover > .main_pricing {
   left: 195px;
   transition: 0.5s ease;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > .main_pricing {
+    left: 400px;
+  }
 }
 .dessert_info:hover > .dessert_pricing {
   left: 195px;
   transition: 0.5s ease;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > .dessert_pricing {
+    left: 400px;
+  }
+}
 .starter_info:hover > .starter_accompaniment {
   width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > .starter_accompaniment {
+    width: inherit;
+  }
 }
 .main_info:hover > .main_accompaniment {
   width: 195px;
 }
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > .main_accompaniment {
+    width: inherit;
+  }
+}
 .dessert_info:hover > .dessert_accompaniment {
   width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > .dessert_accompaniment {
+    width: inherit;
+  }
 }

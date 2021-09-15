@@ -76,7 +76,16 @@ section.location {
   box-shadow: inset $color-shadow 0px 3px 2px 0px;
   background-color: $colorback-medium;
 }
-
+.location_icon {
+  font-size: $size-small;
+  padding-right: $padding-size;
+  cursor: pointer;
+}
+.location_place {
+  font-size: $size-small;
+  font-weight: bold;
+  color: $colorback-dark;
+}
 // ----- Exploration section -----
 section.exploration {
   width: 100%;

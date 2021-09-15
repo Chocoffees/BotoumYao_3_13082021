@@ -904,6 +904,14 @@ section.menu {
       align-self: flex-end;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter h2,
+  .main h2,
+  .dessert h2 {
+    right: 235px;
+  }
+}
+
 .starter_info,
 .main_info,
 .dessert_info {
@@ -919,6 +927,14 @@ section.menu {
   padding-left: 15px;
   background-color: white;
   white-space: nowrap;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info,
+  .main_info,
+  .dessert_info {
+    width: 500px;
+  }
 }
 
 .starter_item,
@@ -955,6 +971,14 @@ section.menu {
   bottom: 15px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_pricing,
+  .main_pricing,
+  .dessert_pricing {
+    left: 450px;
+  }
+}
+
 .order {
   width: 100%;
   height: -webkit-max-content;
@@ -966,7 +990,7 @@ section.menu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 30px 0 30px 0;
+  margin-top: 30px;
 }
 
 .order_button {
@@ -1127,6 +1151,12 @@ a {
   left: 230px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > #addToOrder {
+    left: 450px;
+  }
+}
+
 .starter_info:hover > #addToOrder svg {
   -webkit-animation: spin 0.5s linear;
           animation: spin 0.5s linear;
@@ -1138,6 +1168,12 @@ a {
   background-color: #99e2d0;
   width: 50px;
   left: 230px;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > #addToOrder {
+    left: 450px;
+  }
 }
 
 .main_info:hover > #addToOrder svg {
@@ -1153,6 +1189,12 @@ a {
   left: 230px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > #addToOrder {
+    left: 450px;
+  }
+}
+
 .dessert_info:hover > #addToOrder svg {
   -webkit-animation: spin 0.5s linear;
           animation: spin 0.5s linear;
@@ -1166,10 +1208,22 @@ a {
   transition: 0.5s ease;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > .starter_pricing {
+    left: 400px;
+  }
+}
+
 .main_info:hover > .main_pricing {
   left: 195px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > .main_pricing {
+    left: 400px;
+  }
 }
 
 .dessert_info:hover > .dessert_pricing {
@@ -1178,15 +1232,39 @@ a {
   transition: 0.5s ease;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > .dessert_pricing {
+    left: 400px;
+  }
+}
+
 .starter_info:hover > .starter_accompaniment {
   width: 195px;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > .starter_accompaniment {
+    width: inherit;
+  }
 }
 
 .main_info:hover > .main_accompaniment {
   width: 195px;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > .main_accompaniment {
+    width: inherit;
+  }
+}
+
 .dessert_info:hover > .dessert_accompaniment {
   width: 195px;
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > .dessert_accompaniment {
+    width: inherit;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

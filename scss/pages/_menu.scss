@@ -1,0 +1,347 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the menu page.
+// -----------------------------------------------------------------------------
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "roboto";
+  margin: 0px;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+// ----- Header -----
+.menu_header {
+  width: auto;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo_normal {
+  width: 150px;
+  height: max-content;
+}
+.back_button {
+  width: 30px;
+  height: 30px;
+  color: black;
+  position: relative;
+  bottom: 35px;
+  padding-left: 20px;
+}
+
+// ----- Presentation section -----
+section.presentation {
+  width: 100%;
+  height: max-content;
+  position: absolute;
+  top: 50px;
+}
+.presentation_photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.presentation_photoPortrait {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+// ----- Menu section -----
+section.menu {
+  @include menu_styles();
+}
+.title {
+  width: auto;
+  height: 50px;
+  font-size: $size-medium;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-size $padding-size 0 $padding-size;
+}
+.menu_name {
+  font-family: "shrikhand";
+  height: max-content;
+  margin: 0;
+}
+.like_buttonMenu {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 32px;
+  cursor: pointer;
+}
+// ----- Starter/Main/Dessert -----
+.starter,
+.main,
+.dessert {
+  @include position-grid();
+  padding: $padding-size $padding-size;
+}
+.starter h2,
+.main h2,
+.dessert h2 {
+  @include sectionTitle-styles();
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter h2,
+  .main h2,
+  .dessert h2 {
+    right: 235px;
+  }
+}
+.starter_info,
+.main_info,
+.dessert_info {
+  @include radius-small();
+  padding-left: $padding-size;
+  background-color: white;
+  white-space: nowrap;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info,
+  .main_info,
+  .dessert_info {
+    width: 500px;
+  }
+}
+.starter_item,
+.main_item,
+.dessert_item {
+  @include name-styles();
+  padding-top: 5px;
+  line-height: 1.5em;
+}
+.starter_accompaniment,
+.main_accompaniment,
+.dessert_accompaniment {
+  @include accompaniement-styles();
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.starter_pricing,
+.main_pricing,
+.dessert_pricing {
+  @include pricing-styles();
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_pricing,
+  .main_pricing,
+  .dessert_pricing {
+    left: 450px;
+  }
+}
+// ----- Order button -----
+.order {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.order_button {
+  @include gradient-button();
+}
+// ----- Footer -----
+.menu_footer {
+  height: 150px;
+  padding: $padding-size $padding-size;
+  background-color: $colorback-dark;
+  position: relative;
+  top: 200px;
+}
+.logo_small {
+  width: 100px;
+  font-family: $font-family;
+  font-size: $size-large;
+  font-weight: normal;
+  color: $color-text;
+}
+.footer_elements {
+  font-size: $size-small;
+  font-family: "roboto";
+  color: $color-text;
+  list-style-type: none;
+  line-height: 20px;
+  padding-left: 0px;
+}
+.footer_icon {
+  font-size: $size-xs;
+  padding-right: 10px;
+}
+.fas-fa-hands-helping {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+// ----- Appearance item -----
+.anime {
+  animation: animeProgress 0.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anime_progress {
+  animation: animeProgress 1.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anime_progressNd {
+  animation: animeProgress 2.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anime_progressRd {
+  animation: animeProgress 3s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+// ----- Order -----
+// ----- Elements appearance if ready to order -----
+#addToOrder {
+  @include flex-center();
+  position: relative;
+  bottom: 64px;
+  left: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-bottom: 2px;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+.checkOrder {
+  fill: $colorback-light;
+}
+.starter_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > #addToOrder {
+    left: 450px;
+  }
+}
+.starter_info:hover > #addToOrder svg {
+  @include validOrder();
+}
+.main_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > #addToOrder {
+    left: 450px;
+  }
+}
+
+.main_info:hover > #addToOrder svg {
+  @include validOrder();
+}
+.dessert_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > #addToOrder {
+    left: 450px;
+  }
+}
+.dessert_info:hover > #addToOrder svg {
+  @include validOrder();
+}
+.starter_info:hover > .starter_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > .starter_pricing {
+    left: 400px;
+  }
+}
+.main_info:hover > .main_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > .main_pricing {
+    left: 400px;
+  }
+}
+.dessert_info:hover > .dessert_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > .dessert_pricing {
+    left: 400px;
+  }
+}
+.starter_info:hover > .starter_accompaniment {
+  width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .starter_info:hover > .starter_accompaniment {
+    width: inherit;
+  }
+}
+.main_info:hover > .main_accompaniment {
+  width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .main_info:hover > .main_accompaniment {
+    width: inherit;
+  }
+}
+.dessert_info:hover > .dessert_accompaniment {
+  width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
+  .dessert_info:hover > .dessert_accompaniment {
+    width: inherit;
+  }
+}

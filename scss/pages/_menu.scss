@@ -117,6 +117,13 @@ section.menu {
     width: 500px;
   }
 }
+@media (min-width: 1025px) {
+  .starter_info:hover,
+  .main_info:hover,
+  .dessert_info:hover {
+    box-shadow: $color-tertiary 2px 5px 7px 2px;
+  }
+}
 .starter_item,
 .main_item,
 .dessert_item {

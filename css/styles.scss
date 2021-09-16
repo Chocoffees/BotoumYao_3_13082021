@@ -280,6 +280,11 @@ section.functions {
     width: 500px;
   }
 }
+@media (min-width: 1025px) {
+  .functions h2 {
+    width: 700px;
+  }
+}
 // ----- Function 1 -----
 .choose {
   @include radius-small();
@@ -291,6 +296,14 @@ section.functions {
 @media (min-width: 568px) and (max-width: 1024px) {
   .choose {
     width: 500px;
+  }
+}
+@media (min-width: 1025px) {
+  .choose {
+    width: 700px;
+    &.choose:hover {
+      box-shadow: $color-primary 2px 5px 7px 2px;
+    }
   }
 }
 .choose_elements {
@@ -306,6 +319,11 @@ section.functions {
     right: 490px;
   }
 }
+@media (min-width: 1025px) {
+  .bullets {
+    right: 690px;
+  }
+}
 .choose_icon {
   opacity: 0.5;
 }
@@ -313,6 +331,12 @@ section.functions {
   .choose_icon {
     position: relative;
     left: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .choose_icon {
+    position: relative;
+    left: 30px;
   }
 }
 .choose_title {
@@ -323,6 +347,13 @@ section.functions {
   .choose_title {
     position: relative;
     right: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  .choose_title {
+    text-transform: uppercase;
+    position: relative;
+    right: 80px;
   }
 }
 
@@ -339,6 +370,14 @@ section.functions {
     width: 500px;
   }
 }
+@media (min-width: 1025px) {
+  .compose {
+    width: 700px;
+    &.compose:hover {
+      box-shadow: $color-primary 2px 5px 7px 2px;
+    }
+  }
+}
 .compose_elements {
   @include functions-positionElements();
   @include enabled();
@@ -352,6 +391,12 @@ section.functions {
     left: 20px;
   }
 }
+@media (min-width: 1025px) {
+  .compose_icon {
+    position: relative;
+    left: 30px;
+  }
+}
 .compose_title {
   font-size: $size-small;
   font-weight: bold;
@@ -360,6 +405,13 @@ section.functions {
   .compose_title {
     position: relative;
     right: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  .compose_title {
+    text-transform: uppercase;
+    position: relative;
+    right: 80px;
   }
 }
 
@@ -376,6 +428,14 @@ section.functions {
     width: 500px;
   }
 }
+@media (min-width: 1025px) {
+  .taste {
+    width: 700px;
+    &.taste:hover {
+      box-shadow: $color-primary 2px 5px 7px 2px;
+    }
+  }
+}
 .taste_elements {
   @include functions-positionElements();
   @include enabled();
@@ -389,6 +449,12 @@ section.functions {
     left: 20px;
   }
 }
+@media (min-width: 1025px) {
+  .taste_icon {
+    position: relative;
+    left: 30px;
+  }
+}
 .taste_title {
   font-size: $size-small;
   font-weight: bold;
@@ -397,6 +463,13 @@ section.functions {
   .taste_title {
     position: relative;
     right: 50px;
+  }
+}
+@media (min-width: 1025px) {
+  .taste_title {
+    text-transform: uppercase;
+    position: relative;
+    right: 80px;
   }
 }
 
@@ -421,6 +494,11 @@ section.restaurant {
     width: 500px;
   }
 }
+@media (min-width: 1025px) {
+  .restaurant h2 {
+    width: 700px;
+  }
+}
 .card {
   @include card-styles();
   &:hover {
@@ -432,11 +510,24 @@ section.restaurant {
     width: 500px;
   }
 }
+@media (min-width: 1025px) {
+  .card {
+    width: 700px;
+    &.card:hover {
+      box-shadow: $color-primary 2px 5px 7px 2px;
+    }
+  }
+}
 .card_photo1 {
   @include photo-styles();
   object-position: $position-bottom;
 }
 @media (min-width: 568px) and (max-width: 1024px) {
+  .card_photo1 {
+    object-position: center;
+  }
+}
+@media (min-width: 1025px) {
   .card_photo1 {
     object-position: center;
   }
@@ -480,6 +571,11 @@ section.restaurant {
 @media (min-width: 568px) and (max-width: 1024px) {
   .like_button {
     left: 200px;
+  }
+}
+@media (min-width: 1025px) {
+  .like_button {
+    left: 280px;
   }
 }
 svg {
@@ -543,6 +639,16 @@ svg {
     grid-template-rows: 1fr 1fr;
   }
 }
+@media (min-width: 1025px) {
+  ul.footer_elements {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
 .footer_icon {
   font-size: $size-xs;
   padding-right: 10px;
@@ -588,7 +694,7 @@ a {
   display: none;
 }
 
-// ----- Menu La palette du goût -----
+// ----- Menus -----
 .container {
   max-width: 1100px;
   margin: auto;
@@ -690,6 +796,13 @@ section.menu {
   .main_info,
   .dessert_info {
     width: 500px;
+  }
+}
+@media (min-width: 1025px) {
+  .starter_info:hover,
+  .main_info:hover,
+  .dessert_info:hover {
+    box-shadow: $color-tertiary 2px 5px 7px 2px;
   }
 }
 .starter_item,

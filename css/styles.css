@@ -185,6 +185,12 @@ section.functions {
   }
 }
 
+@media (min-width: 1025px) {
+  .functions h2 {
+    width: 700px;
+  }
+}
+
 .choose {
   width: 280px;
   height: 60px;
@@ -214,6 +220,16 @@ section.functions {
 @media (min-width: 568px) and (max-width: 1024px) {
   .choose {
     width: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .choose {
+    width: 700px;
+  }
+  .choose.choose:hover {
+    -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
+            box-shadow: #9356dc 2px 5px 7px 2px;
   }
 }
 
@@ -271,6 +287,12 @@ section.functions {
   }
 }
 
+@media (min-width: 1025px) {
+  .bullets {
+    right: 690px;
+  }
+}
+
 .choose_icon {
   opacity: 0.5;
 }
@@ -279,6 +301,13 @@ section.functions {
   .choose_icon {
     position: relative;
     left: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .choose_icon {
+    position: relative;
+    left: 30px;
   }
 }
 
@@ -291,6 +320,14 @@ section.functions {
   .choose_title {
     position: relative;
     right: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .choose_title {
+    text-transform: uppercase;
+    position: relative;
+    right: 80px;
   }
 }
 
@@ -323,6 +360,16 @@ section.functions {
 @media (min-width: 568px) and (max-width: 1024px) {
   .compose {
     width: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .compose {
+    width: 700px;
+  }
+  .compose.compose:hover {
+    -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
+            box-shadow: #9356dc 2px 5px 7px 2px;
   }
 }
 
@@ -365,6 +412,13 @@ section.functions {
   }
 }
 
+@media (min-width: 1025px) {
+  .compose_icon {
+    position: relative;
+    left: 30px;
+  }
+}
+
 .compose_title {
   font-size: small;
   font-weight: bold;
@@ -374,6 +428,14 @@ section.functions {
   .compose_title {
     position: relative;
     right: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .compose_title {
+    text-transform: uppercase;
+    position: relative;
+    right: 80px;
   }
 }
 
@@ -406,6 +468,16 @@ section.functions {
 @media (min-width: 568px) and (max-width: 1024px) {
   .taste {
     width: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .taste {
+    width: 700px;
+  }
+  .taste.taste:hover {
+    -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
+            box-shadow: #9356dc 2px 5px 7px 2px;
   }
 }
 
@@ -448,6 +520,13 @@ section.functions {
   }
 }
 
+@media (min-width: 1025px) {
+  .taste_icon {
+    position: relative;
+    left: 30px;
+  }
+}
+
 .taste_title {
   font-size: small;
   font-weight: bold;
@@ -457,6 +536,14 @@ section.functions {
   .taste_title {
     position: relative;
     right: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .taste_title {
+    text-transform: uppercase;
+    position: relative;
+    right: 80px;
   }
 }
 
@@ -492,6 +579,12 @@ section.restaurant {
   }
 }
 
+@media (min-width: 1025px) {
+  .restaurant h2 {
+    width: 700px;
+  }
+}
+
 .card {
   width: 300px;
   height: 200px;
@@ -514,6 +607,16 @@ section.restaurant {
   }
 }
 
+@media (min-width: 1025px) {
+  .card {
+    width: 700px;
+  }
+  .card.card:hover {
+    -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
+            box-shadow: #9356dc 2px 5px 7px 2px;
+  }
+}
+
 .card_photo1 {
   width: 100%;
   height: 140px;
@@ -526,6 +629,13 @@ section.restaurant {
 }
 
 @media (min-width: 568px) and (max-width: 1024px) {
+  .card_photo1 {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+
+@media (min-width: 1025px) {
   .card_photo1 {
     -o-object-position: center;
        object-position: center;
@@ -609,6 +719,12 @@ section.restaurant {
 @media (min-width: 568px) and (max-width: 1024px) {
   .like_button {
     left: 200px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .like_button {
+    left: 280px;
   }
 }
 
@@ -697,6 +813,21 @@ svg {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  ul.footer_elements {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -934,6 +1065,15 @@ section.menu {
   .main_info,
   .dessert_info {
     width: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .starter_info:hover,
+  .main_info:hover,
+  .dessert_info:hover {
+    -webkit-box-shadow: #99e2d0 2px 5px 7px 2px;
+            box-shadow: #99e2d0 2px 5px 7px 2px;
   }
 }
 

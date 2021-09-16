@@ -1,4 +1,4 @@
-$(window).on('load', function() {
+jQuery(window).on('load', function() {
     setTimeout(displaySite, 2000);
 
     /**

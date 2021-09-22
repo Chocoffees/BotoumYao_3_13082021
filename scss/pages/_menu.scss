@@ -5,16 +5,30 @@
 html {
   width: 100%;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   font-family: "roboto";
   margin: 0px;
 }
+
 .container {
   max-width: 1100px;
   margin: auto;
+}
+
+// ----- Background desktop version La palette du goût -----
+@media (min-width: 1025px) {
+  .desktop {
+    width: 100%;
+    height: 600px;
+    background-image: url("/images/La_palette_du_gout.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 // ----- Header -----
@@ -25,10 +39,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .logo_normal {
   width: 150px;
   height: max-content;
 }
+@media (min-width: 1025px) {
+  .logo_normal {
+    width: 180px;
+    padding-top: $padding-size;
+  }
+}
+
 .back_button {
   width: 30px;
   height: 30px;
@@ -36,6 +58,12 @@ body {
   position: relative;
   bottom: 35px;
   padding-left: 20px;
+}
+@media (min-width: 1025px) {
+  .back_button {
+    font-size: $size-large;
+    padding-top: 30px;
+  }
 }
 
 // ----- Presentation section -----
@@ -45,11 +73,18 @@ section.presentation {
   position: absolute;
   top: 50px;
 }
+@media (min-width: 1025px) {
+  section.presentation {
+    display: none;
+  }
+}
+
 .presentation_photo {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
+
 .presentation_photoPortrait {
   width: 100%;
   height: 250px;
@@ -61,6 +96,7 @@ section.presentation {
 section.menu {
   @include menu_styles();
 }
+
 .title {
   width: auto;
   height: 50px;
@@ -71,11 +107,32 @@ section.menu {
   align-items: center;
   padding: $padding-size $padding-size 0 $padding-size;
 }
+@media (min-width: 1025px) {
+  .title {
+    position: relative;
+    left: 625px;
+    width: 270px;
+    padding: 0;
+  }
+}
+
 .menu_name {
   font-family: "shrikhand";
   height: max-content;
   margin: 0;
 }
+@media (min-width: 1025px) {
+  .menu_name {
+    width: max-content;
+    font-size: $size-xl;
+    font-weight: normal;
+    color: white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-top: 2px solid $color-primary;
+  }
+}
+
 .like_buttonMenu {
   display: flex;
   align-items: center;
@@ -83,6 +140,13 @@ section.menu {
   height: 32px;
   cursor: pointer;
 }
+@media (min-width: 1025px) {
+  .like_buttonMenu {
+    position: relative;
+    left: 30px;
+  }
+}
+
 // ----- Starter/Main/Dessert -----
 .starter,
 .main,
@@ -90,6 +154,14 @@ section.menu {
   @include position-grid();
   padding: $padding-size $padding-size;
 }
+@media (min-width: 1025px) {
+  .starter,
+  .main,
+  .dessert {
+    margin-top: 50px;
+  }
+}
+
 .starter h2,
 .main h2,
 .dessert h2 {
@@ -102,6 +174,16 @@ section.menu {
     right: 235px;
   }
 }
+@media (min-width: 1025px) {
+  .starter h2,
+  .main h2,
+  .dessert h2 {
+    font-size: $size-large;
+    font-weight: bold;
+    color: white;
+  }
+}
+
 .starter_info,
 .main_info,
 .dessert_info {
@@ -118,12 +200,20 @@ section.menu {
   }
 }
 @media (min-width: 1025px) {
+  .starter_info,
+  .main_info,
+  .dessert_info {
+    background-color: #ffffffba;
+  }
+}
+@media (min-width: 1025px) {
   .starter_info:hover,
   .main_info:hover,
   .dessert_info:hover {
     box-shadow: $color-tertiary 2px 5px 7px 2px;
   }
 }
+
 .starter_item,
 .main_item,
 .dessert_item {
@@ -131,6 +221,15 @@ section.menu {
   padding-top: 5px;
   line-height: 1.5em;
 }
+@media (min-width: 1025px) {
+  .starter_item,
+  .main_item,
+  .dessert_item {
+    font-size: $size-medium;
+    font-weight: bolder;
+  }
+}
+
 .starter_accompaniment,
 .main_accompaniment,
 .dessert_accompaniment {
@@ -139,6 +238,7 @@ section.menu {
   overflow: hidden;
   white-space: nowrap;
 }
+
 .starter_pricing,
 .main_pricing,
 .dessert_pricing {
@@ -151,6 +251,7 @@ section.menu {
     left: 450px;
   }
 }
+
 // ----- Order button -----
 .order {
   width: 100%;
@@ -159,9 +260,20 @@ section.menu {
   justify-content: center;
   margin-top: 30px;
 }
+
 .order_button {
   @include gradient-button();
 }
+@media (min-width: 1025px) {
+  .order_button {
+    font-size: $size-large;
+    position: relative;
+    top: 400px;
+    right: 630px;
+    font-weight: 800;
+  }
+}
+
 // ----- Footer -----
 .menu_footer {
   height: 150px;
@@ -170,6 +282,16 @@ section.menu {
   position: relative;
   top: 200px;
 }
+@media (min-width: 1025px) {
+  .menu_footer {
+    height: 80px;
+    position: inherit;
+    top: 0px;
+    width: auto;
+    border-top: 4px solid $color-primary;
+  }
+}
+
 .logo_small {
   width: 100px;
   font-family: $font-family;
@@ -177,6 +299,7 @@ section.menu {
   font-weight: normal;
   color: $color-text;
 }
+
 .footer_elements {
   font-size: $size-small;
   font-family: "roboto";
@@ -185,17 +308,34 @@ section.menu {
   line-height: 20px;
   padding-left: 0px;
 }
+@media (min-width: 1025px) {
+  .footer_elements {
+    font-size: $size-medium;
+    width: 60%;
+    height: 0;
+    padding-left: 150px;
+  }
+}
+
 .footer_icon {
   font-size: $size-xs;
   padding-right: 10px;
 }
+@media (min-width: 1025px) {
+  .footer_icon {
+    font-size: $size-large;
+  }
+}
+
 .fas-fa-hands-helping {
   font-size: 10px;
 }
+
 a {
   text-decoration: none;
   color: $color-text;
 }
+
 // ----- Appearance item -----
 .anime {
   animation: animeProgress 0.5s;
@@ -208,6 +348,7 @@ a {
     opacity: 1;
   }
 }
+
 .anime_progress {
   animation: animeProgress 1.5s;
 }
@@ -219,6 +360,7 @@ a {
     opacity: 1;
   }
 }
+
 .anime_progressNd {
   animation: animeProgress 2.5s;
 }
@@ -230,6 +372,7 @@ a {
     opacity: 1;
   }
 }
+
 .anime_progressRd {
   animation: animeProgress 3s;
 }
@@ -241,6 +384,7 @@ a {
     opacity: 1;
   }
 }
+
 // ----- Order -----
 // ----- Elements appearance if ready to order -----
 #addToOrder {
@@ -258,9 +402,11 @@ a {
   height: 100%;
   transition: 0.5s ease;
 }
+
 .checkOrder {
   fill: $colorback-light;
 }
+
 .starter_info:hover > #addToOrder {
   background-color: $color-tertiary;
   width: 50px;
@@ -271,9 +417,11 @@ a {
     left: 450px;
   }
 }
+
 .starter_info:hover > #addToOrder svg {
   @include validOrder();
 }
+
 .main_info:hover > #addToOrder {
   background-color: $color-tertiary;
   width: 50px;
@@ -288,6 +436,7 @@ a {
 .main_info:hover > #addToOrder svg {
   @include validOrder();
 }
+
 .dessert_info:hover > #addToOrder {
   background-color: $color-tertiary;
   width: 50px;
@@ -298,9 +447,11 @@ a {
     left: 450px;
   }
 }
+
 .dessert_info:hover > #addToOrder svg {
   @include validOrder();
 }
+
 .starter_info:hover > .starter_pricing {
   left: 195px;
   transition: 0.5s ease;
@@ -310,6 +461,7 @@ a {
     left: 400px;
   }
 }
+
 .main_info:hover > .main_pricing {
   left: 195px;
   transition: 0.5s ease;
@@ -319,6 +471,7 @@ a {
     left: 400px;
   }
 }
+
 .dessert_info:hover > .dessert_pricing {
   left: 195px;
   transition: 0.5s ease;
@@ -328,6 +481,7 @@ a {
     left: 400px;
   }
 }
+
 .starter_info:hover > .starter_accompaniment {
   width: 195px;
 }
@@ -336,6 +490,7 @@ a {
     width: inherit;
   }
 }
+
 .main_info:hover > .main_accompaniment {
   width: 195px;
 }
@@ -344,6 +499,7 @@ a {
     width: inherit;
   }
 }
+
 .dessert_info:hover > .dessert_accompaniment {
   width: 195px;
 }

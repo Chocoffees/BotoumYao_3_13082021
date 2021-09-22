@@ -703,6 +703,12 @@ section.restaurant {
   }
 }
 
+@media (min-width: 1025px) {
+  .card_new {
+    left: 600px;
+  }
+}
+
 .like_button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -891,8 +897,19 @@ a {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1500px;
   margin: auto;
+}
+
+@media (min-width: 1025px) {
+  .desktop {
+    width: 100%;
+    height: 560px;
+    background-image: url("../images/La_palette_du_gout.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 .menu_header {
@@ -916,6 +933,13 @@ a {
   height: max-content;
 }
 
+@media (min-width: 1025px) {
+  .logo_normal {
+    width: 180px;
+    padding-top: 15px;
+  }
+}
+
 .back_button {
   width: 30px;
   height: 30px;
@@ -925,6 +949,13 @@ a {
   padding-left: 20px;
 }
 
+@media (min-width: 1025px) {
+  .back_button {
+    font-size: 1.2em;
+    padding-top: 30px;
+  }
+}
+
 section.presentation {
   width: 100%;
   height: -webkit-max-content;
@@ -932,6 +963,12 @@ section.presentation {
   height: max-content;
   position: absolute;
   top: 50px;
+}
+
+@media (min-width: 1025px) {
+  section.presentation {
+    display: none;
+  }
 }
 
 .presentation_photo {
@@ -963,6 +1000,25 @@ section.menu {
   top: 200px;
 }
 
+@media (min-width: 1025px) {
+  section.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    border-radius: inherit;
+    padding-top: 30px;
+    padding-bottom: 170px;
+    background-color: black;
+    background-color: rgba(59, 28, 28, 0.2);
+    width: auto;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    border-top: 2px solid #9356dc;
+  }
+}
+
 .title {
   width: auto;
   height: 50px;
@@ -980,12 +1036,34 @@ section.menu {
   padding: 15px 15px 0 15px;
 }
 
+@media (min-width: 1025px) {
+  .title {
+    position: relative;
+    left: 625px;
+    width: 270px;
+    padding: 0;
+  }
+}
+
 .menu_name {
   font-family: "shrikhand";
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   margin: 0;
+}
+
+@media (min-width: 1025px) {
+  .menu_name {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 1.8em;
+    font-weight: normal;
+    color: white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+  }
 }
 
 .like_buttonMenu {
@@ -998,6 +1076,13 @@ section.menu {
   position: relative;
   height: 32px;
   cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+  .like_buttonMenu {
+    position: relative;
+    left: 30px;
+  }
 }
 
 .starter,
@@ -1017,6 +1102,14 @@ section.menu {
       grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 1em;
   padding: 15px 15px;
+}
+
+@media (min-width: 1025px) {
+  .starter,
+  .main,
+  .dessert {
+    margin-top: 50px;
+  }
 }
 
 .starter h2,
@@ -1040,6 +1133,16 @@ section.menu {
   .main h2,
   .dessert h2 {
     right: 235px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .starter h2,
+  .main h2,
+  .dessert h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
   }
 }
 
@@ -1069,6 +1172,14 @@ section.menu {
 }
 
 @media (min-width: 1025px) {
+  .starter_info,
+  .main_info,
+  .dessert_info {
+    background-color: #ffffffba;
+  }
+}
+
+@media (min-width: 1025px) {
   .starter_info:hover,
   .main_info:hover,
   .dessert_info:hover {
@@ -1087,6 +1198,15 @@ section.menu {
   margin-bottom: 0;
   padding-top: 5px;
   line-height: 1.5em;
+}
+
+@media (min-width: 1025px) {
+  .starter_item,
+  .main_item,
+  .dessert_item {
+    font-size: 0.9em;
+    font-weight: bolder;
+  }
 }
 
 .starter_accompaniment,
@@ -1152,12 +1272,31 @@ section.menu {
           box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
+@media (min-width: 1025px) {
+  .order_button {
+    font-size: 1.2em;
+    position: relative;
+    top: 400px;
+    right: 630px;
+    font-weight: 800;
+  }
+}
+
 .menu_footer {
   height: 150px;
   padding: 15px 15px;
   background-color: #2e2c2c;
   position: relative;
   top: 200px;
+}
+
+@media (min-width: 1025px) {
+  .menu_footer {
+    height: 80px;
+    position: inherit;
+    top: 0px;
+    border-top: 4px solid #9356dc;
+  }
 }
 
 .logo_small {
@@ -1175,11 +1314,27 @@ section.menu {
   list-style-type: none;
   line-height: 20px;
   padding-left: 0px;
+  cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+  ul.footer_elements {
+    font-size: 0.9em;
+    width: 60%;
+    height: 0;
+    padding-left: 150px;
+  }
 }
 
 .footer_icon {
   font-size: x-small;
   padding-right: 10px;
+}
+
+@media (min-width: 1025px) {
+  .footer_icon {
+    font-size: 1.2em;
+  }
 }
 
 .fas-fa-hands-helping {

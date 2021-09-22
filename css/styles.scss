@@ -200,16 +200,19 @@ $position-bottom: bottom;
     transform: rotate(360deg);
   }
 }
+
 // ----- Header -----
 header {
   width: 100%;
   height: 50px;
   @include flex-center();
 }
+
 .logo_normal {
   width: 150px;
   height: max-content;
 }
+
 // ----- Location section -----
 section.location {
   width: 100%;
@@ -218,16 +221,19 @@ section.location {
   box-shadow: inset $color-shadow 0px 3px 2px 0px;
   background-color: $colorback-medium;
 }
+
 .location_icon {
   font-size: $size-small;
   padding-right: $padding-size;
   cursor: pointer;
 }
+
 .location_place {
   font-size: $size-small;
   font-weight: bold;
   color: $colorback-dark;
 }
+
 // ----- Exploration section -----
 section.exploration {
   width: 100%;
@@ -238,6 +244,7 @@ section.exploration {
   line-height: $size-large;
   background-color: $colorback-light;
 }
+
 .exploration_introduce {
   font-size: $size-large;
   max-width: 200px;
@@ -248,6 +255,7 @@ section.exploration {
     max-width: inherit;
   }
 }
+
 .exploration_discover {
   font-size: $size-medium;
   color: $colorback-dark;
@@ -258,17 +266,20 @@ section.exploration {
     max-width: inherit;
   }
 }
+
 .exploration_button {
   @include gradient-button();
   &:hover {
     opacity: 0.7;
   }
 }
+
 // ----- Functions section -----
 section.functions {
   @include position-grid();
   padding: $padding-size $padding-size 30px $padding-size;
 }
+
 .functions h2 {
   width: 290px;
   font-size: $size-large;
@@ -285,6 +296,7 @@ section.functions {
     width: 700px;
   }
 }
+
 // ----- Function 1 -----
 .choose {
   @include radius-small();
@@ -306,10 +318,12 @@ section.functions {
     }
   }
 }
+
 .choose_elements {
   @include functions-positionElements();
   @include enabled();
 }
+
 .bullets {
   @include flex-center();
   @include bullet-styles();
@@ -324,6 +338,7 @@ section.functions {
     right: 690px;
   }
 }
+
 .choose_icon {
   opacity: 0.5;
 }
@@ -339,6 +354,7 @@ section.functions {
     left: 30px;
   }
 }
+
 .choose_title {
   font-size: $size-small;
   font-weight: bold;
@@ -378,10 +394,12 @@ section.functions {
     }
   }
 }
+
 .compose_elements {
   @include functions-positionElements();
   @include enabled();
 }
+
 .compose_icon {
   opacity: 0.5;
 }
@@ -397,6 +415,7 @@ section.functions {
     left: 30px;
   }
 }
+
 .compose_title {
   font-size: $size-small;
   font-weight: bold;
@@ -436,10 +455,12 @@ section.functions {
     }
   }
 }
+
 .taste_elements {
   @include functions-positionElements();
   @include enabled();
 }
+
 .taste_icon {
   opacity: 0.5;
 }
@@ -455,6 +476,7 @@ section.functions {
     left: 30px;
   }
 }
+
 .taste_title {
   font-size: $size-small;
   font-weight: bold;
@@ -484,6 +506,7 @@ section.restaurant {
   background-color: $colorback-light;
   padding-bottom: 30px;
 }
+
 .restaurant h2 {
   width: 290px;
   font-size: $size-large;
@@ -499,6 +522,7 @@ section.restaurant {
     width: 700px;
   }
 }
+
 .card {
   @include card-styles();
   &:hover {
@@ -518,6 +542,7 @@ section.restaurant {
     }
   }
 }
+
 .card_photo1 {
   @include photo-styles();
   object-position: $position-bottom;
@@ -532,15 +557,19 @@ section.restaurant {
     object-position: center;
   }
 }
+
 .card_info {
   @include info-styles();
 }
+
 .card_name {
   @include name-styles();
 }
+
 .card_place {
   @include place-styles();
 }
+
 .card_new {
   @include flex-center();
   width: 60px;
@@ -560,6 +589,12 @@ section.restaurant {
     left: 400px;
   }
 }
+@media (min-width: 1025px) {
+  .card_new {
+    left: 600px;
+  }
+}
+
 .like_button {
   display: flex;
   align-items: center;
@@ -578,10 +613,12 @@ section.restaurant {
     left: 280px;
   }
 }
+
 svg {
   width: 22px;
   height: 20px;
 }
+
 .likeStyle_button {
   fill: $colorback-light;
   stroke: black;
@@ -605,16 +642,19 @@ svg {
     }
   }
 }
+
 .card_photo2 {
   @include photo-styles();
   object-position: $position-center;
 }
+
 // ----- Footer -----
 .home_footer {
   height: 150px;
   padding: $padding-size $padding-size;
   background-color: $colorback-dark;
 }
+
 .logo_small {
   width: 100px;
   font-family: $font-family;
@@ -622,6 +662,7 @@ svg {
   font-weight: normal;
   color: $color-text;
 }
+
 .footer_elements {
   font-size: $size-small;
   font-family: "roboto";
@@ -653,9 +694,11 @@ svg {
   font-size: $size-xs;
   padding-right: 10px;
 }
+
 .fas-fa-hands-helping {
   font-size: 10px;
 }
+
 a {
   text-decoration: none;
   color: $color-text;
@@ -685,20 +728,34 @@ a {
     transform: rotate(360deg);
   }
 }
+
 .loader_icon {
   width: 50px;
   height: 40px;
   fill: $color-primary;
 }
+
 .container {
   display: none;
 }
 
 // ----- Menus -----
 .container {
-  max-width: 1100px;
+  max-width: 1500px;
   margin: auto;
 }
+// ----- Background desktop version La palette du goût -----
+@media (min-width: 1025px) {
+  .desktop {
+    width: 100%;
+    height: 560px;
+    background-image: url('../images/La_palette_du_gout.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
 // ----- Header -----
 .menu_header {
   width: auto;
@@ -707,10 +764,18 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .logo_normal {
   width: 150px;
   height: max-content;
 }
+@media (min-width: 1025px) {
+  .logo_normal {
+    width: 180px;
+    padding-top: $padding-size;
+  }
+}
+
 .back_button {
   width: 30px;
   height: 30px;
@@ -719,6 +784,13 @@ a {
   bottom: 35px;
   padding-left: 20px;
 }
+@media (min-width: 1025px) {
+  .back_button {
+    font-size: $size-large;
+    padding-top: 30px;
+  }
+}
+
 // ----- Presentation section -----
 section.presentation {
   width: 100%;
@@ -726,11 +798,18 @@ section.presentation {
   position: absolute;
   top: 50px;
 }
+@media (min-width: 1025px) {
+  section.presentation {
+    display: none;
+  }
+}
+
 .presentation_photo {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
+
 .presentation_photoPortrait {
   width: 100%;
   height: 250px;
@@ -742,6 +821,21 @@ section.presentation {
 section.menu {
   @include menu_styles();
 }
+@media (min-width: 1025px) {
+  section.menu {
+    display: flex;
+    top: 0;
+    border-radius: inherit;
+    padding-top: 30px;
+    padding-bottom: 170px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(59, 28, 28, 0.2);
+    width: auto;
+    height: max-content;
+    border-top: 2px solid $color-primary;
+  }
+}
+
 .title {
   width: auto;
   height: 50px;
@@ -752,11 +846,31 @@ section.menu {
   align-items: center;
   padding: $padding-size $padding-size 0 $padding-size;
 }
+@media (min-width: 1025px) {
+  .title {
+    position: relative;
+    left: 625px;
+    width: 270px;
+    padding: 0;
+  }
+}
+
 .menu_name {
   font-family: "shrikhand";
   height: max-content;
   margin: 0;
 }
+@media (min-width: 1025px) {
+  .menu_name {
+    width: max-content;
+    font-size: $size-xl;
+    font-weight: normal;
+    color: white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+  }
+}
+
 .like_buttonMenu {
   display: flex;
   align-items: center;
@@ -764,6 +878,13 @@ section.menu {
   height: 32px;
   cursor: pointer;
 }
+@media (min-width: 1025px) {
+  .like_buttonMenu {
+    position: relative;
+    left: 30px;
+  }
+}
+
 // ----- Starter/Main/Dessert -----
 .starter,
 .main,
@@ -771,264 +892,356 @@ section.menu {
   @include position-grid();
   padding: $padding-size $padding-size;
 }
-.starter h2,
-.main h2,
-.dessert h2 {
-  @include sectionTitle-styles();
+@media (min-width: 1025px) {
+  .starter,
+.main,
+.dessert {
+  margin-top: 50px;
 }
-@media (min-width: 568px) and (max-width: 1024px) {
+}
   .starter h2,
   .main h2,
   .dessert h2 {
-    right: 235px;
+    @include sectionTitle-styles();
   }
-}
-.starter_info,
-.main_info,
-.dessert_info {
-  @include radius-small();
-  padding-left: $padding-size;
-  background-color: white;
-  white-space: nowrap;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .starter h2,
+    .main h2,
+    .dessert h2 {
+      right: 235px;
+    }
+  }
+  @media (min-width: 1025px) {
+    .starter h2,
+    .main h2,
+    .dessert h2 {
+      font-size: $size-large;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
   .starter_info,
   .main_info,
   .dessert_info {
-    width: 500px;
+    @include radius-small();
+    padding-left: $padding-size;
+    background-color: white;
+    white-space: nowrap;
   }
-}
-@media (min-width: 1025px) {
-  .starter_info:hover,
-  .main_info:hover,
-  .dessert_info:hover {
-    box-shadow: $color-tertiary 2px 5px 7px 2px;
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .starter_info,
+    .main_info,
+    .dessert_info {
+      width: 500px;
+    }
   }
-}
-.starter_item,
-.main_item,
-.dessert_item {
-  @include name-styles();
-  padding-top: 5px;
-  line-height: 1.5em;
-}
-.starter_accompaniment,
-.main_accompaniment,
-.dessert_accompaniment {
-  @include accompaniement-styles();
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.starter_pricing,
-.main_pricing,
-.dessert_pricing {
-  @include pricing-styles();
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 1025px) {
+    .starter_info,
+    .main_info,
+    .dessert_info {
+      background-color: #ffffffba;
+    }
+  }
+  @media (min-width: 1025px) {
+    .starter_info:hover,
+    .main_info:hover,
+    .dessert_info:hover {
+      box-shadow: $color-tertiary 2px 5px 7px 2px;
+    }
+  }
+
+  .starter_item,
+  .main_item,
+  .dessert_item {
+    @include name-styles();
+    padding-top: 5px;
+    line-height: 1.5em;
+  }
+  @media (min-width: 1025px) {
+    .starter_item,
+    .main_item,
+    .dessert_item {
+      font-size: $size-medium;
+      font-weight: bolder;
+    }
+  }
+
+  .starter_accompaniment,
+  .main_accompaniment,
+  .dessert_accompaniment {
+    @include accompaniement-styles();
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
   .starter_pricing,
   .main_pricing,
   .dessert_pricing {
-    left: 450px;
+    @include pricing-styles();
   }
-}
-// ----- Order button -----
-.order {
-  width: 100%;
-  height: max-content;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-.order_button {
-  @include gradient-button();
-}
-// ----- Footer -----
-.menu_footer {
-  height: 150px;
-  padding: $padding-size $padding-size;
-  background-color: $colorback-dark;
-  position: relative;
-  top: 200px;
-}
-.logo_small {
-  width: 100px;
-  font-family: $font-family;
-  font-size: $size-large;
-  font-weight: normal;
-  color: $color-text;
-}
-.footer_elements {
-  font-size: $size-small;
-  font-family: "roboto";
-  color: $color-text;
-  list-style-type: none;
-  line-height: 20px;
-  padding-left: 0px;
-}
-.footer_icon {
-  font-size: $size-xs;
-  padding-right: 10px;
-}
-.fas-fa-hands-helping {
-  font-size: 10px;
-}
-a {
-  text-decoration: none;
-  color: $color-text;
-}
-// ----- Appearance item -----
-.anime {
-  animation: animeProgress 0.5s;
-}
-@keyframes animeProgress {
-  from {
-    opacity: 0;
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .starter_pricing,
+    .main_pricing,
+    .dessert_pricing {
+      left: 450px;
+    }
   }
-  to {
-    opacity: 1;
+
+  // ----- Order button -----
+  .order {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
   }
-}
-.anime_progress {
-  animation: animeProgress 1.5s;
-}
-@keyframes animeProgress {
-  from {
-    opacity: 0;
+
+  .order_button {
+    @include gradient-button();
   }
-  to {
-    opacity: 1;
+
+  @media (min-width: 1025px) {
+    .order_button {
+      font-size: $size-large;
+      position: relative;
+      top: 400px;
+      right: 630px;
+      font-weight: 800;
+    }
   }
-}
-.anime_progressNd {
-  animation: animeProgress 2.5s;
-}
-@keyframes animeProgress {
-  from {
-    opacity: 0;
+
+  // ----- Footer -----
+  .menu_footer {
+    height: 150px;
+    padding: $padding-size $padding-size;
+    background-color: $colorback-dark;
+    position: relative;
+    top: 200px;
   }
-  to {
-    opacity: 1;
+  @media (min-width: 1025px) {
+    .menu_footer {
+      height: 80px;
+      position: inherit;
+      top: 0px;
+      border-top: 4px solid $color-primary;
+    }
   }
-}
-.anime_progressRd {
-  animation: animeProgress 3s;
-}
-@keyframes animeProgress {
-  from {
-    opacity: 0;
+
+  .logo_small {
+    width: 100px;
+    font-family: $font-family;
+    font-size: $size-large;
+    font-weight: normal;
+    color: $color-text;
   }
-  to {
-    opacity: 1;
+
+  .footer_elements {
+    font-size: $size-small;
+    font-family: "roboto";
+    color: $color-text;
+    list-style-type: none;
+    line-height: 20px;
+    padding-left: 0px;
+    cursor: pointer;
   }
-}
-// ----- Order -----
-// ----- Elements appearance if ready to order -----
-#addToOrder {
-  @include flex-center();
-  position: relative;
-  bottom: 64px;
-  left: 100%;
-  border: 1px solid transparent;
-  background-color: transparent;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding-bottom: 2px;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: 0.5s ease;
-}
-.checkOrder {
-  fill: $colorback-light;
-}
-.starter_info:hover > #addToOrder {
-  background-color: $color-tertiary;
-  width: 50px;
-  left: 230px;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 1025px) {
+    ul.footer_elements {
+      font-size: $size-medium;
+      width: 60%;
+      height: 0;
+      padding-left: 150px;
+    }
+  }
+
+  .footer_icon {
+    font-size: $size-xs;
+    padding-right: 10px;
+  }
+  @media (min-width: 1025px) {
+    .footer_icon {
+      font-size: $size-large;
+    }
+  }
+
+  .fas-fa-hands-helping {
+    font-size: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
+
+  // ----- Appearance item -----
+  .anime {
+    animation: animeProgress 0.5s;
+  }
+  @keyframes animeProgress {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .anime_progress {
+    animation: animeProgress 1.5s;
+  }
+  @keyframes animeProgress {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .anime_progressNd {
+    animation: animeProgress 2.5s;
+  }
+  @keyframes animeProgress {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .anime_progressRd {
+    animation: animeProgress 3s;
+  }
+  @keyframes animeProgress {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  // ----- Order -----
+  // ----- Elements appearance if ready to order -----
+  #addToOrder {
+    @include flex-center();
+    position: relative;
+    bottom: 64px;
+    left: 100%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 0.5s ease;
+  }
+  
+  .checkOrder {
+    fill: $colorback-light;
+  }
+
   .starter_info:hover > #addToOrder {
-    left: 450px;
+    background-color: $color-tertiary;
+    width: 50px;
+    left: 230px;
   }
-}
-.starter_info:hover > #addToOrder svg {
-  @include validOrder();
-}
-.main_info:hover > #addToOrder {
-  background-color: $color-tertiary;
-  width: 50px;
-  left: 230px;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .starter_info:hover > #addToOrder {
+      left: 450px;
+    }
+  }
+
+  .starter_info:hover > #addToOrder svg {
+    @include validOrder();
+  }
+
   .main_info:hover > #addToOrder {
-    left: 450px;
+    background-color: $color-tertiary;
+    width: 50px;
+    left: 230px;
   }
-}
-.main_info:hover > #addToOrder svg {
-  @include validOrder();
-}
-.dessert_info:hover > #addToOrder {
-  background-color: $color-tertiary;
-  width: 50px;
-  left: 230px;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .main_info:hover > #addToOrder {
+      left: 450px;
+    }
+  }
+
+  .main_info:hover > #addToOrder svg {
+    @include validOrder();
+  }
+
   .dessert_info:hover > #addToOrder {
-    left: 450px;
+    background-color: $color-tertiary;
+    width: 50px;
+    left: 230px;
   }
-}
-.dessert_info:hover > #addToOrder svg {
-  @include validOrder();
-}
-.starter_info:hover > .starter_pricing {
-  left: 195px;
-  transition: 0.5s ease;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .dessert_info:hover > #addToOrder {
+      left: 450px;
+    }
+  }
+
+  .dessert_info:hover > #addToOrder svg {
+    @include validOrder();
+  }
+
   .starter_info:hover > .starter_pricing {
-    left: 400px;
+    left: 195px;
+    transition: 0.5s ease;
   }
-}
-.main_info:hover > .main_pricing {
-  left: 195px;
-  transition: 0.5s ease;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .starter_info:hover > .starter_pricing {
+      left: 400px;
+    }
+  }
+
   .main_info:hover > .main_pricing {
-    left: 400px;
+    left: 195px;
+    transition: 0.5s ease;
   }
-}
-.dessert_info:hover > .dessert_pricing {
-  left: 195px;
-  transition: 0.5s ease;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .main_info:hover > .main_pricing {
+      left: 400px;
+    }
+  }
+
   .dessert_info:hover > .dessert_pricing {
-    left: 400px;
+    left: 195px;
+    transition: 0.5s ease;
   }
-}
-.starter_info:hover > .starter_accompaniment {
-  width: 195px;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .dessert_info:hover > .dessert_pricing {
+      left: 400px;
+    }
+  }
+
   .starter_info:hover > .starter_accompaniment {
-    width: inherit;
+    width: 195px;
   }
-}
-.main_info:hover > .main_accompaniment {
-  width: 195px;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .starter_info:hover > .starter_accompaniment {
+      width: inherit;
+    }
+  }
+
   .main_info:hover > .main_accompaniment {
-    width: inherit;
+    width: 195px;
   }
-}
-.dessert_info:hover > .dessert_accompaniment {
-  width: 195px;
-}
-@media (min-width: 568px) and (max-width: 1024px) {
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .main_info:hover > .main_accompaniment {
+      width: inherit;
+    }
+  }
+
   .dessert_info:hover > .dessert_accompaniment {
-    width: inherit;
+    width: 195px;
   }
-}
+  @media (min-width: 568px) and (max-width: 1024px) {
+    .dessert_info:hover > .dessert_accompaniment {
+      width: inherit;
+    }
+  } 

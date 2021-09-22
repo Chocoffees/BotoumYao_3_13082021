@@ -105,3 +105,12 @@ svg {
 .order_button {
   @include gradient-button();
 }
+@media (min-width: 1025px) {
+  .order_button {
+    font-size: $size-large;
+    position: relative;
+    top: 400px;
+    right: 630px;
+    font-weight: 800;
+  }
+}

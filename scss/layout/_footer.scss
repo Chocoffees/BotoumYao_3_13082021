@@ -8,6 +8,7 @@
   padding: $padding-size $padding-size;
   background-color: $colorback-dark;
 }
+
 .logo_small {
   width: 100px;
   font-family: $font-family;
@@ -15,6 +16,7 @@
   font-weight: normal;
   color: $color-text;
 }
+
 .footer_elements {
   font-size: $size-small;
   font-family: "roboto";
@@ -22,25 +24,58 @@
   list-style-type: none;
   line-height: 20px;
   padding-left: 0px;
+  cursor: pointer;
 }
+@media (min-width: 568px) {
+  ul.footer_elements {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (min-width: 1025px) {
+  ul.footer_elements {
+    font-size: $size-medium;
+    width: 60%;
+    height: 0;
+    padding-left: 150px;
+  }
+}
+
 .footer_icon {
   font-size: $size-xs;
   padding-right: 10px;
 }
+@media (min-width: 1025px) {
+  .footer_icon {
+    font-size: $size-large;
+  }
+}
+
 .fas-fa-hands-helping {
   font-size: 10px;
 }
+
 a {
   text-decoration: none;
   color: $color-text;
 }
 
-@media (min-width: 568px) {
-  ul.footer_elements {
-    width: 100%;
-    height: 50%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      }
+// ----- Footer on menus -----
+.menu_footer {
+  height: 150px;
+  padding: $padding-size $padding-size;
+  background-color: $colorback-dark;
+  position: relative;
+  top: 200px;
+}
+@media (min-width: 1025px) {
+  .menu_footer {
+    height: 80px;
+    position: inherit;
+    top: 0px;
+    border-top: 4px solid $color-primary;
   }
+}

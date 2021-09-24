@@ -207,10 +207,20 @@ header {
   height: 50px;
   @include flex-center();
 }
+@media (min-width: 1025px) {
+  header {
+    height: 70px;
+  }
+}
 
 .logo_normal {
   width: 150px;
   height: max-content;
+}
+@media (min-width: 1025px) {
+  .logo_normal {
+    padding-top: 5px;
+  }
 }
 
 // ----- Location section -----
@@ -221,17 +231,33 @@ section.location {
   box-shadow: inset $color-shadow 0px 3px 2px 0px;
   background-color: $colorback-medium;
 }
+@media (min-width: 1025px) {
+  section.location {
+    height: 60px;
+    box-shadow: inset $color-primary 0px 1px 0px 0px;
+  }
+}
 
 .location_icon {
   font-size: $size-small;
   padding-right: $padding-size;
   cursor: pointer;
 }
+@media (min-width: 1025px) {
+  .location_icon {
+    font-size: $size-large;
+  }
+}
 
 .location_place {
   font-size: $size-small;
   font-weight: bold;
   color: $colorback-dark;
+}
+@media (min-width: 1025px) {
+  .location_place {
+    font-size: $size-large;
+  }
 }
 
 // ----- Exploration section -----
@@ -244,15 +270,27 @@ section.exploration {
   line-height: $size-large;
   background-color: $colorback-light;
 }
-
+@media (min-width: 1025px) {
+  section.exploration {
+    background-color: $colorback-dark;
+  }
+}
 .exploration_introduce {
   font-size: $size-large;
   max-width: 200px;
   margin: 0;
 }
+
 @media (min-width: 568px) {
   h1.exploration_introduce {
     max-width: inherit;
+  }
+}
+@media (min-width: 1025px) {
+  h1.exploration_introduce {
+    font-size: $size-xl;
+    color: white;
+    text-shadow: 0 0 0.5em $color-secondary, 0 0 0.2em$color-tertiary;
   }
 }
 
@@ -266,6 +304,12 @@ section.exploration {
     max-width: inherit;
   }
 }
+@media (min-width: 1025px) {
+  p.exploration_discover {
+    font-size: $size-medium;
+    color: white;
+  }
+}
 
 .exploration_button {
   @include gradient-button();
@@ -273,11 +317,27 @@ section.exploration {
     opacity: 0.7;
   }
 }
+@media (min-width: 1025px) {
+  .exploration_button {
+    width: 280px;
+    font-size: $size-large;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+}
 
 // ----- Functions section -----
 section.functions {
   @include position-grid();
   padding: $padding-size $padding-size 30px $padding-size;
+}
+@media (min-width: 1025px) {
+  section.functions {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    margin-top: 30px;
+  }
 }
 
 .functions h2 {
@@ -293,7 +353,8 @@ section.functions {
 }
 @media (min-width: 1025px) {
   .functions h2 {
-    width: 700px;
+    width: max-content;
+    padding-top: 15px;
   }
 }
 
@@ -312,7 +373,7 @@ section.functions {
 }
 @media (min-width: 1025px) {
   .choose {
-    width: 700px;
+    width: 350px;
     &.choose:hover {
       box-shadow: $color-primary 2px 5px 7px 2px;
     }
@@ -335,7 +396,7 @@ section.functions {
 }
 @media (min-width: 1025px) {
   .bullets {
-    right: 690px;
+    left: -15px;
   }
 }
 
@@ -351,7 +412,8 @@ section.functions {
 @media (min-width: 1025px) {
   .choose_icon {
     position: relative;
-    left: 30px;
+    left: 10px;
+    font-size: $size-large;
   }
 }
 
@@ -369,7 +431,7 @@ section.functions {
   .choose_title {
     text-transform: uppercase;
     position: relative;
-    right: 80px;
+    left: 1px;
   }
 }
 
@@ -388,7 +450,7 @@ section.functions {
 }
 @media (min-width: 1025px) {
   .compose {
-    width: 700px;
+    width: 350px;
     &.compose:hover {
       box-shadow: $color-primary 2px 5px 7px 2px;
     }
@@ -412,7 +474,8 @@ section.functions {
 @media (min-width: 1025px) {
   .compose_icon {
     position: relative;
-    left: 30px;
+    left: 10px;
+    font-size: $size-large;
   }
 }
 
@@ -430,7 +493,7 @@ section.functions {
   .compose_title {
     text-transform: uppercase;
     position: relative;
-    right: 80px;
+    left: 1px;
   }
 }
 
@@ -449,7 +512,7 @@ section.functions {
 }
 @media (min-width: 1025px) {
   .taste {
-    width: 700px;
+    width: 350px;
     &.taste:hover {
       box-shadow: $color-primary 2px 5px 7px 2px;
     }
@@ -473,7 +536,8 @@ section.functions {
 @media (min-width: 1025px) {
   .taste_icon {
     position: relative;
-    left: 30px;
+    left: 10px;
+    font-size: $size-large;
   }
 }
 
@@ -491,7 +555,7 @@ section.functions {
   .taste_title {
     text-transform: uppercase;
     position: relative;
-    right: 80px;
+    left: 1px;
   }
 }
 
@@ -520,6 +584,8 @@ section.restaurant {
 @media (min-width: 1025px) {
   .restaurant h2 {
     width: 700px;
+    position: relative;
+    right: 330px;
   }
 }
 
@@ -537,6 +603,8 @@ section.restaurant {
 @media (min-width: 1025px) {
   .card {
     width: 700px;
+    margin-bottom: 30px;
+    height: 380px;
     &.card:hover {
       box-shadow: $color-primary 2px 5px 7px 2px;
     }
@@ -555,6 +623,7 @@ section.restaurant {
 @media (min-width: 1025px) {
   .card_photo1 {
     object-position: center;
+    height: 300px;
   }
 }
 
@@ -564,6 +633,11 @@ section.restaurant {
 
 .card_name {
   @include name-styles();
+}
+@media (min-width: 1025px) {
+  .card_name {
+    font-size: $size-large;
+  }
 }
 
 .card_place {
@@ -591,7 +665,12 @@ section.restaurant {
 }
 @media (min-width: 1025px) {
   .card_new {
-    left: 600px;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    left: 500px;
+    bottom: 350px;
+    font-size: initial;
   }
 }
 
@@ -610,7 +689,9 @@ section.restaurant {
 }
 @media (min-width: 1025px) {
   .like_button {
-    left: 280px;
+    position: relative;
+    left: 300px;
+    bottom: 90px;
   }
 }
 
@@ -647,12 +728,25 @@ svg {
   @include photo-styles();
   object-position: $position-center;
 }
+@media (min-width: 1025px) {
+  .card_photo2 {
+    height: 300px;
+  }
+}
 
 // ----- Footer -----
 .home_footer {
   height: 150px;
   padding: $padding-size $padding-size;
   background-color: $colorback-dark;
+}
+@media (min-width: 1025px) {
+  .home_footer {
+    height: 80px;
+    position: inherit;
+    top: 0px;
+    border-top: 4px solid $color-primary;
+  }
 }
 
 .logo_small {
@@ -744,13 +838,45 @@ a {
   max-width: 1500px;
   margin: auto;
 }
-// ----- Background desktop version La palette du goût -----
+// ----- Background desktop on menus -----
 @media (min-width: 1025px) {
-  .desktop {
+  .desktop_background_M1 {
     width: 100%;
     height: 560px;
-    background-image: url('../images/La_palette_du_gout.jpg');
+    background-image: url("../images/La_palette_du_gout.jpg");
     background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1025px) {
+  .desktop_background_M2 {
+    width: 100%;
+    height: 560px;
+    background-image: url("../images/La_note_enchantee.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 1025px) {
+  .desktop_background_M3 {
+    width: 100%;
+    height: 560px;
+    background-image: url("../images/A_la_francaise.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 1025px) {
+  .desktop_background_M4 {
+    width: 100%;
+    height: 560px;
+    background-image: url("../images/Le_delice_des_sens.jpg");
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -821,6 +947,7 @@ section.presentation {
 section.menu {
   @include menu_styles();
 }
+
 @media (min-width: 1025px) {
   section.menu {
     display: flex;
@@ -833,6 +960,20 @@ section.menu {
     width: auto;
     height: max-content;
     border-top: 2px solid $color-primary;
+  }
+}
+
+@media (min-width: 1025px) {
+  .align_item {
+    position: relative;
+    top: 20px;
+  }
+}
+
+// ----- Align menu on page "menu_A_la_francaise" -----
+@media (min-width: 1025px) {
+  .align_menu {
+    padding-left: 30px;
   }
 }
 
@@ -894,354 +1035,361 @@ section.menu {
 }
 @media (min-width: 1025px) {
   .starter,
-.main,
-.dessert {
-  margin-top: 50px;
+  .main,
+  .dessert {
+    margin-top: 50px;
+  }
 }
+.starter h2,
+.main h2,
+.dessert h2 {
+  @include sectionTitle-styles();
 }
+@media (min-width: 568px) and (max-width: 1024px) {
   .starter h2,
   .main h2,
   .dessert h2 {
-    @include sectionTitle-styles();
+    right: 235px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .starter h2,
-    .main h2,
-    .dessert h2 {
-      right: 235px;
-    }
+}
+@media (min-width: 1025px) {
+  .starter h2,
+  .main h2,
+  .dessert h2 {
+    font-size: $size-large;
+    font-weight: bold;
+    color: white;
   }
-  @media (min-width: 1025px) {
-    .starter h2,
-    .main h2,
-    .dessert h2 {
-      font-size: $size-large;
-      font-weight: bold;
-      color: white;
-    }
-  }
+}
 
+.starter_info,
+.main_info,
+.dessert_info {
+  @include radius-small();
+  padding-left: $padding-size;
+  background-color: white;
+  white-space: nowrap;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .starter_info,
   .main_info,
   .dessert_info {
-    @include radius-small();
-    padding-left: $padding-size;
-    background-color: white;
-    white-space: nowrap;
+    width: 500px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .starter_info,
-    .main_info,
-    .dessert_info {
-      width: 500px;
-    }
+}
+@media (min-width: 1025px) {
+  .starter_info,
+  .main_info,
+  .dessert_info {
+    background-color: #ffffffba;
   }
-  @media (min-width: 1025px) {
-    .starter_info,
-    .main_info,
-    .dessert_info {
-      background-color: #ffffffba;
-    }
+}
+@media (min-width: 1025px) {
+  .starter_info:hover,
+  .main_info:hover,
+  .dessert_info:hover {
+    box-shadow: $color-tertiary 2px 5px 7px 2px;
   }
-  @media (min-width: 1025px) {
-    .starter_info:hover,
-    .main_info:hover,
-    .dessert_info:hover {
-      box-shadow: $color-tertiary 2px 5px 7px 2px;
-    }
-  }
+}
 
+.starter_item,
+.main_item,
+.dessert_item {
+  @include name-styles();
+  padding-top: 5px;
+  line-height: 1.5em;
+}
+@media (min-width: 1025px) {
   .starter_item,
   .main_item,
   .dessert_item {
-    @include name-styles();
-    padding-top: 5px;
-    line-height: 1.5em;
+    font-size: $size-medium;
+    font-weight: bolder;
   }
-  @media (min-width: 1025px) {
-    .starter_item,
-    .main_item,
-    .dessert_item {
-      font-size: $size-medium;
-      font-weight: bolder;
-    }
-  }
+}
 
-  .starter_accompaniment,
-  .main_accompaniment,
-  .dessert_accompaniment {
-    @include accompaniement-styles();
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+.starter_accompaniment,
+.main_accompaniment,
+.dessert_accompaniment {
+  @include accompaniement-styles();
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
+.starter_pricing,
+.main_pricing,
+.dessert_pricing {
+  @include pricing-styles();
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .starter_pricing,
   .main_pricing,
   .dessert_pricing {
-    @include pricing-styles();
+    left: 450px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .starter_pricing,
-    .main_pricing,
-    .dessert_pricing {
-      left: 450px;
-    }
-  }
+}
 
-  // ----- Order button -----
-  .order {
-    width: 100%;
-    height: max-content;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
+// ----- Order button -----
+.order {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 
+.order_button {
+  @include gradient-button();
+}
+
+@media (min-width: 1025px) {
   .order_button {
-    @include gradient-button();
-  }
-
-  @media (min-width: 1025px) {
-    .order_button {
-      font-size: $size-large;
-      position: relative;
-      top: 400px;
-      right: 630px;
-      font-weight: 800;
-    }
-  }
-
-  // ----- Footer -----
-  .menu_footer {
-    height: 150px;
-    padding: $padding-size $padding-size;
-    background-color: $colorback-dark;
-    position: relative;
-    top: 200px;
-  }
-  @media (min-width: 1025px) {
-    .menu_footer {
-      height: 80px;
-      position: inherit;
-      top: 0px;
-      border-top: 4px solid $color-primary;
-    }
-  }
-
-  .logo_small {
-    width: 100px;
-    font-family: $font-family;
     font-size: $size-large;
-    font-weight: normal;
-    color: $color-text;
-  }
-
-  .footer_elements {
-    font-size: $size-small;
-    font-family: "roboto";
-    color: $color-text;
-    list-style-type: none;
-    line-height: 20px;
-    padding-left: 0px;
-    cursor: pointer;
-  }
-  @media (min-width: 1025px) {
-    ul.footer_elements {
-      font-size: $size-medium;
-      width: 60%;
-      height: 0;
-      padding-left: 150px;
-    }
-  }
-
-  .footer_icon {
-    font-size: $size-xs;
-    padding-right: 10px;
-  }
-  @media (min-width: 1025px) {
-    .footer_icon {
-      font-size: $size-large;
-    }
-  }
-
-  .fas-fa-hands-helping {
-    font-size: 10px;
-  }
-
-  a {
-    text-decoration: none;
-    color: $color-text;
-  }
-
-  // ----- Appearance item -----
-  .anime {
-    animation: animeProgress 0.5s;
-  }
-  @keyframes animeProgress {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .anime_progress {
-    animation: animeProgress 1.5s;
-  }
-  @keyframes animeProgress {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .anime_progressNd {
-    animation: animeProgress 2.5s;
-  }
-  @keyframes animeProgress {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  .anime_progressRd {
-    animation: animeProgress 3s;
-  }
-  @keyframes animeProgress {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  // ----- Order -----
-  // ----- Elements appearance if ready to order -----
-  #addToOrder {
-    @include flex-center();
     position: relative;
-    bottom: 64px;
-    left: 100%;
-    border: 1px solid transparent;
-    background-color: transparent;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding-bottom: 2px;
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: 0.5s ease;
+    top: 400px;
+    right: 630px;
+    font-weight: 800;
   }
-  
-  .checkOrder {
-    fill: $colorback-light;
-  }
+}
 
+// ----- Align button on page "menu_La_note_enchantee" -----
+@media (min-width: 1025px) {
+  .align_button {
+    top: 420px;
+  }
+}
+
+// ----- Footer -----
+.menu_footer {
+  height: 150px;
+  padding: $padding-size $padding-size;
+  background-color: $colorback-dark;
+  position: relative;
+  top: 200px;
+}
+@media (min-width: 1025px) {
+  .menu_footer {
+    height: 80px;
+    position: inherit;
+    top: 0px;
+    border-top: 4px solid $color-primary;
+  }
+}
+
+.logo_small {
+  width: 100px;
+  font-family: $font-family;
+  font-size: $size-large;
+  font-weight: normal;
+  color: $color-text;
+}
+
+.footer_elements {
+  font-size: $size-small;
+  font-family: "roboto";
+  color: $color-text;
+  list-style-type: none;
+  line-height: 20px;
+  padding-left: 0px;
+  cursor: pointer;
+}
+@media (min-width: 1025px) {
+  ul.footer_elements {
+    font-size: $size-medium;
+    width: 60%;
+    height: 0;
+    padding-left: 150px;
+  }
+}
+
+.footer_icon {
+  font-size: $size-xs;
+  padding-right: 10px;
+}
+@media (min-width: 1025px) {
+  .footer_icon {
+    font-size: $size-large;
+  }
+}
+
+.fas-fa-hands-helping {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+
+// ----- Appearance item -----
+.anime {
+  animation: animeProgress 0.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anime_progress {
+  animation: animeProgress 1.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anime_progressNd {
+  animation: animeProgress 2.5s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anime_progressRd {
+  animation: animeProgress 3s;
+}
+@keyframes animeProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ----- Order -----
+// ----- Elements appearance if ready to order -----
+#addToOrder {
+  @include flex-center();
+  position: relative;
+  bottom: 64px;
+  left: 100%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-bottom: 2px;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.checkOrder {
+  fill: $colorback-light;
+}
+
+.starter_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .starter_info:hover > #addToOrder {
-    background-color: $color-tertiary;
-    width: 50px;
-    left: 230px;
+    left: 450px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .starter_info:hover > #addToOrder {
-      left: 450px;
-    }
-  }
+}
 
-  .starter_info:hover > #addToOrder svg {
-    @include validOrder();
-  }
+.starter_info:hover > #addToOrder svg {
+  @include validOrder();
+}
 
+.main_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .main_info:hover > #addToOrder {
-    background-color: $color-tertiary;
-    width: 50px;
-    left: 230px;
+    left: 450px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .main_info:hover > #addToOrder {
-      left: 450px;
-    }
-  }
+}
 
-  .main_info:hover > #addToOrder svg {
-    @include validOrder();
-  }
+.main_info:hover > #addToOrder svg {
+  @include validOrder();
+}
 
+.dessert_info:hover > #addToOrder {
+  background-color: $color-tertiary;
+  width: 50px;
+  left: 230px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .dessert_info:hover > #addToOrder {
-    background-color: $color-tertiary;
-    width: 50px;
-    left: 230px;
+    left: 450px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .dessert_info:hover > #addToOrder {
-      left: 450px;
-    }
-  }
+}
 
-  .dessert_info:hover > #addToOrder svg {
-    @include validOrder();
-  }
+.dessert_info:hover > #addToOrder svg {
+  @include validOrder();
+}
 
+.starter_info:hover > .starter_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .starter_info:hover > .starter_pricing {
-    left: 195px;
-    transition: 0.5s ease;
+    left: 400px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .starter_info:hover > .starter_pricing {
-      left: 400px;
-    }
-  }
+}
 
+.main_info:hover > .main_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .main_info:hover > .main_pricing {
-    left: 195px;
-    transition: 0.5s ease;
+    left: 400px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .main_info:hover > .main_pricing {
-      left: 400px;
-    }
-  }
+}
 
+.dessert_info:hover > .dessert_pricing {
+  left: 195px;
+  transition: 0.5s ease;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .dessert_info:hover > .dessert_pricing {
-    left: 195px;
-    transition: 0.5s ease;
+    left: 400px;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .dessert_info:hover > .dessert_pricing {
-      left: 400px;
-    }
-  }
+}
 
+.starter_info:hover > .starter_accompaniment {
+  width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .starter_info:hover > .starter_accompaniment {
-    width: 195px;
+    width: inherit;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .starter_info:hover > .starter_accompaniment {
-      width: inherit;
-    }
-  }
+}
 
+.main_info:hover > .main_accompaniment {
+  width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .main_info:hover > .main_accompaniment {
-    width: 195px;
+    width: inherit;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .main_info:hover > .main_accompaniment {
-      width: inherit;
-    }
-  }
+}
 
+.dessert_info:hover > .dessert_accompaniment {
+  width: 195px;
+}
+@media (min-width: 568px) and (max-width: 1024px) {
   .dessert_info:hover > .dessert_accompaniment {
-    width: 195px;
+    width: inherit;
   }
-  @media (min-width: 568px) and (max-width: 1024px) {
-    .dessert_info:hover > .dessert_accompaniment {
-      width: inherit;
-    }
-  } 
+}

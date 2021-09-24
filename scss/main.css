@@ -50,6 +50,15 @@ header {
   background-color: #2e2c2c;
 }
 
+@media (min-width: 1025px) {
+  .home_footer {
+    height: 80px;
+    position: inherit;
+    top: 0px;
+    border-top: 4px solid #9356dc;
+  }
+}
+
 .logo_small {
   width: 100px;
   font-family: "shrikhand";
@@ -83,10 +92,16 @@ header {
 
 @media (min-width: 1025px) {
   ul.footer_elements {
-    font-size: 0.9em;
-    width: 60%;
-    height: 0;
-    padding-left: 150px;
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -155,6 +170,14 @@ a {
   opacity: 0.7;
   -webkit-box-shadow: #2e2c2c 2px 5px 7px 2px;
           box-shadow: #2e2c2c 2px 5px 7px 2px;
+}
+
+@media (min-width: 1025px) {
+  .exploration_button {
+    width: 280px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
 }
 
 .like_button {
@@ -253,6 +276,12 @@ svg {
   }
 }
 
+@media (min-width: 1025px) {
+  .align_button {
+    top: 420px;
+  }
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -284,11 +313,23 @@ header {
           align-items: center;
 }
 
+@media (min-width: 1025px) {
+  header {
+    height: 70px;
+  }
+}
+
 .logo_normal {
   width: 150px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+}
+
+@media (min-width: 1025px) {
+  .logo_normal {
+    padding-top: 5px;
+  }
 }
 
 section.location {
@@ -308,16 +349,36 @@ section.location {
   background-color: #ededed;
 }
 
+@media (min-width: 1025px) {
+  section.location {
+    height: 60px;
+    -webkit-box-shadow: inset #9356dc 0px 2px 0px 0px;
+            box-shadow: inset #9356dc 0px 2px 0px 0px;
+  }
+}
+
 .location_icon {
   font-size: small;
   padding-right: 15px;
   cursor: pointer;
 }
 
+@media (min-width: 1025px) {
+  .location_icon {
+    font-size: 1.2em;
+  }
+}
+
 .location_place {
   font-size: small;
   font-weight: bold;
   color: #2e2c2c;
+}
+
+@media (min-width: 1025px) {
+  .location_place {
+    font-size: 1.2em;
+  }
 }
 
 section.exploration {
@@ -341,6 +402,12 @@ section.exploration {
   background-color: #f7f7f7;
 }
 
+@media (min-width: 1025px) {
+  section.exploration {
+    background-color: #2e2c2c;
+  }
+}
+
 .exploration_introduce {
   font-size: 1.2em;
   max-width: 200px;
@@ -353,6 +420,14 @@ section.exploration {
   }
 }
 
+@media (min-width: 1025px) {
+  h1.exploration_introduce {
+    font-size: 1.8em;
+    color: white;
+    text-shadow: 0 0 0.5em #ff79da, 0 0 0.2em #99e2d0;
+  }
+}
+
 .exploration_discover {
   font-size: 0.9em;
   color: #2e2c2c;
@@ -362,6 +437,13 @@ section.exploration {
 @media (min-width: 568px) {
   p.exploration_discover {
     max-width: inherit;
+  }
+}
+
+@media (min-width: 1025px) {
+  p.exploration_discover {
+    font-size: 0.9em;
+    color: white;
   }
 }
 
@@ -383,6 +465,15 @@ section.exploration {
           box-shadow: #2e2c2c 2px 5px 7px 2px;
 }
 
+@media (min-width: 1025px) {
+  .exploration_button {
+    width: 280px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+}
+
 section.functions {
   display: -ms-grid;
   display: grid;
@@ -398,6 +489,19 @@ section.functions {
       grid-template-rows: 1fr 1fr 1fr 1fr;
   row-gap: 1em;
   padding: 15px 15px 30px 15px;
+}
+
+@media (min-width: 1025px) {
+  section.functions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 80px;
+    margin-top: 30px;
+  }
 }
 
 .functions h2 {
@@ -453,7 +557,7 @@ section.functions {
 
 @media (min-width: 1025px) {
   .choose {
-    width: 700px;
+    width: 350px;
   }
   .choose.choose:hover {
     -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
@@ -517,7 +621,7 @@ section.functions {
 
 @media (min-width: 1025px) {
   .bullets {
-    right: 690px;
+    left: 15px;
   }
 }
 
@@ -535,7 +639,8 @@ section.functions {
 @media (min-width: 1025px) {
   .choose_icon {
     position: relative;
-    left: 30px;
+    left: 10px;
+    font-size: 1.2em;
   }
 }
 
@@ -555,7 +660,7 @@ section.functions {
   .choose_title {
     text-transform: uppercase;
     position: relative;
-    right: 80px;
+    left: 1px;
   }
 }
 
@@ -593,7 +698,7 @@ section.functions {
 
 @media (min-width: 1025px) {
   .compose {
-    width: 700px;
+    width: 350px;
   }
   .compose.compose:hover {
     -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
@@ -643,7 +748,8 @@ section.functions {
 @media (min-width: 1025px) {
   .compose_icon {
     position: relative;
-    left: 30px;
+    left: 10px;
+    font-size: 1.2em;
   }
 }
 
@@ -663,7 +769,7 @@ section.functions {
   .compose_title {
     text-transform: uppercase;
     position: relative;
-    right: 80px;
+    left: 1px;
   }
 }
 
@@ -701,7 +807,7 @@ section.functions {
 
 @media (min-width: 1025px) {
   .taste {
-    width: 700px;
+    width: 350px;
   }
   .taste.taste:hover {
     -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
@@ -751,7 +857,8 @@ section.functions {
 @media (min-width: 1025px) {
   .taste_icon {
     position: relative;
-    left: 30px;
+    left: 10px;
+    font-size: 1.2em;
   }
 }
 
@@ -771,7 +878,7 @@ section.functions {
   .taste_title {
     text-transform: uppercase;
     position: relative;
-    right: 80px;
+    left: 1px;
   }
 }
 
@@ -810,6 +917,8 @@ section.restaurant {
 @media (min-width: 1025px) {
   .restaurant h2 {
     width: 700px;
+    position: relative;
+    right: 330px;
   }
 }
 
@@ -838,6 +947,8 @@ section.restaurant {
 @media (min-width: 1025px) {
   .card {
     width: 700px;
+    margin-bottom: 30px;
+    height: 380px;
   }
   .card.card:hover {
     -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
@@ -867,6 +978,7 @@ section.restaurant {
   .card_photo1 {
     -o-object-position: center;
        object-position: center;
+    height: 300px;
   }
 }
 
@@ -894,6 +1006,12 @@ section.restaurant {
   color: #2e2c2c;
   margin-top: 5px;
   margin-bottom: 0;
+}
+
+@media (min-width: 1025px) {
+  .card_name {
+    font-size: 1.2em;
+  }
 }
 
 .card_place {
@@ -933,7 +1051,12 @@ section.restaurant {
 
 @media (min-width: 1025px) {
   .card_new {
-    left: 600px;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    left: 500px;
+    bottom: 350px;
+    font-size: initial;
   }
 }
 
@@ -958,7 +1081,9 @@ section.restaurant {
 
 @media (min-width: 1025px) {
   .like_button {
-    left: 280px;
+    position: relative;
+    left: 300px;
+    bottom: 90px;
   }
 }
 
@@ -1012,10 +1137,25 @@ svg {
      object-position: center;
 }
 
+@media (min-width: 1025px) {
+  .card_photo2 {
+    height: 300px;
+  }
+}
+
 .home_footer {
   height: 150px;
   padding: 15px 15px;
   background-color: #2e2c2c;
+}
+
+@media (min-width: 1025px) {
+  .home_footer {
+    height: 80px;
+    position: inherit;
+    top: 0px;
+    border-top: 4px solid #9356dc;
+  }
 }
 
 .logo_small {

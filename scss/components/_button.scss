@@ -56,6 +56,13 @@ $padding-size: 15px;
 .exploration_button {
   @include gradient-button();
 }
+@media (min-width: 1025px) {
+  .exploration_button {
+    width: 280px;
+    font-size: $size-large;
+    font-weight: bold;
+  }
+}
 
 // ----- Restaurant section -----
 .like_button {
@@ -112,5 +119,12 @@ svg {
     top: 400px;
     right: 630px;
     font-weight: 800;
+  }
+}
+
+// ----- Align button on page "menu_La_note_enchantee" -----
+@media (min-width: 1025px) {
+  .align_button {
+    top: 420px;
   }
 }

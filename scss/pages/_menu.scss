@@ -19,13 +19,45 @@ body {
   margin: auto;
 }
 
-// ----- Background desktop version La palette du goût -----
+// ----- Background desktop on menus -----
 @media (min-width: 1025px) {
-  .desktop {
+  .desktop_background_M1 {
     width: 100%;
     height: 600px;
     background-image: url("/images/La_palette_du_gout.jpg");
     background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1025px) {
+  .desktop_background_M2 {
+    width: 100%;
+    height: 560px;
+    background-image: url("../images/A_la_francaise.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 1025px) {
+  .desktop_background_M3 {
+    width: 100%;
+    height: 560px;
+    background-image: url("../images/A_la_francaise.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 1025px) {
+  .desktop_background_M4 {
+    width: 100%;
+    height: 560px;
+    background-image: url("../images/Le_delice_des_sens.jpg");
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -95,6 +127,27 @@ section.presentation {
 // ----- Menu section -----
 section.menu {
   @include menu_styles();
+}
+@media (min-width: 1025px) {
+  section.menu {
+    display: flex;
+    top: 0;
+    border-radius: inherit;
+    padding-top: 30px;
+    padding-bottom: 170px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(59, 28, 28, 0.2);
+    width: auto;
+    height: max-content;
+    border-top: 2px solid $color-primary;
+  }
+}
+
+// ----- Align menu on page "menu_A_la_francaise" -----
+@media (min-width: 1025px) {
+  .align_menu {
+    padding-left: 30px;
+  }
 }
 
 .title {
@@ -271,6 +324,12 @@ section.menu {
     top: 400px;
     right: 630px;
     font-weight: 800;
+  }
+}
+// ----- Align button on page "menu_La_note_enchantee" -----
+@media (min-width: 1025px) {
+  .align_button {
+    top: 420px;
   }
 }
 

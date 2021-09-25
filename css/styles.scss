@@ -12,6 +12,12 @@ body {
   max-width: 1100px;
   margin: auto;
 }
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
 
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
@@ -224,7 +230,7 @@ header {
 }
 
 // ----- Location section -----
-section.location {
+.location {
   width: 100%;
   @include flex-center();
   border-top: 1px transparent;
@@ -232,7 +238,7 @@ section.location {
   background-color: $colorback-medium;
 }
 @media (min-width: 1025px) {
-  section.location {
+  .location {
     height: 60px;
     box-shadow: inset $color-primary 0px 1px 0px 0px;
   }
@@ -706,7 +712,7 @@ svg {
   stroke-width: 20;
   &:hover,
   &:active {
-    fill: 1px $colorback-light;
+    fill: $colorback-light;
     opacity: 1;
     stroke: unset;
     animation: fadeinbackground 1.2s forwards;
@@ -832,6 +838,23 @@ a {
 .container {
   display: none;
 }
+
+@media (min-width: 1025px) {
+  .interoperability img {
+    border: 0;
+    width: 80px;
+    height: 27px;
+    position: relative;
+    bottom: 25px;
+    left: 95%;
+  }
+}
+@media (min-width: 300px) and (max-width: 1024px) {
+  .interoperability {
+    display: none;
+  }
+}
+
 
 // ----- Menus -----
 .container {

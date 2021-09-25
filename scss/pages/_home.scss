@@ -55,6 +55,12 @@ body {
   max-width: 1100px;
   margin: auto;
 }
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
 
 // ----- Header -----
 header {
@@ -80,7 +86,7 @@ header {
 
 // Main
 // ----- Location section -----
-section.location {
+.location {
   width: 100%;
   @include flex-center();
   border-top: 1px transparent;
@@ -88,7 +94,7 @@ section.location {
   background-color: $colorback-medium;
 }
 @media (min-width: 1025px) {
-  section.location {
+  .location {
     height: 60px;
     box-shadow: inset $color-primary 0px 2px 0px 0px;
   }
@@ -651,4 +657,20 @@ svg {
 a {
   text-decoration: none;
   color: $color-text;
+}
+
+@media (min-width: 1025px) {
+  .interoperability img {
+    border: 0;
+    width: 80px;
+    height: 27px;
+    position: relative;
+    bottom: 25px;
+    left: 1400px;
+  }
+}
+@media (min-width: 300px) and (max-width: 1024px) {
+  .interoperability {
+    display: none;
+  }
 }

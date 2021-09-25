@@ -299,6 +299,13 @@ body {
   margin: auto;
 }
 
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
+
 header {
   width: 100%;
   height: 50px;
@@ -332,7 +339,7 @@ header {
   }
 }
 
-section.location {
+.location {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,7 +357,7 @@ section.location {
 }
 
 @media (min-width: 1025px) {
-  section.location {
+  .location {
     height: 60px;
     -webkit-box-shadow: inset #9356dc 0px 2px 0px 0px;
             box-shadow: inset #9356dc 0px 2px 0px 0px;
@@ -1215,5 +1222,22 @@ svg {
 a {
   text-decoration: none;
   color: white;
+}
+
+@media (min-width: 1025px) {
+  .interoperability img {
+    border: 0;
+    width: 80px;
+    height: 27px;
+    position: relative;
+    bottom: 25px;
+    left: 1400px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 1024px) {
+  .interoperability {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

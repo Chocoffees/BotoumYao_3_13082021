@@ -310,7 +310,8 @@ section.functions {
 
 @media (min-width: 1025px) {
   .choose {
-    width: 350px;
+    width: 250px;
+    margin-right: 10px;
   }
   .choose.choose:hover {
     -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
@@ -451,7 +452,8 @@ section.functions {
 
 @media (min-width: 1025px) {
   .compose {
-    width: 350px;
+    width: 250px;
+    margin-right: 10px;
   }
   .compose.compose:hover {
     -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
@@ -560,7 +562,8 @@ section.functions {
 
 @media (min-width: 1025px) {
   .taste {
-    width: 350px;
+    width: 250px;
+    margin-right: 10px;
   }
   .taste.taste:hover {
     -webkit-box-shadow: #9356dc 2px 5px 7px 2px;
@@ -669,9 +672,8 @@ section.restaurant {
 
 @media (min-width: 1025px) {
   .restaurant h2 {
-    width: 700px;
     position: relative;
-    right: 330px;
+    right: 205px;
   }
 }
 
@@ -906,7 +908,7 @@ svg {
 
 @media (min-width: 1025px) {
   .home_footer {
-    height: 80px;
+    height: 120px;
     position: inherit;
     top: 0px;
     border-top: 4px solid #9356dc;
@@ -1023,8 +1025,7 @@ a {
     width: 80px;
     height: 27px;
     position: relative;
-    bottom: 25px;
-    left: 95%;
+    left: 93%;
   }
 }
 

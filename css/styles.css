@@ -991,8 +991,8 @@ a {
   border-top-color: #9356dc;
   border-right-color: #ff79da;
   border-bottom-color: #99e2d0;
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
+  -webkit-animation: spin 2s 0s linear forwards;
+  animation: spin 2s 0s linear forwards;
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -1003,9 +1003,15 @@ a {
 }
 
 @keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -1016,7 +1022,14 @@ a {
 }
 
 .container {
-  display: none;
+  visibility: hidden;
+  -webkit-animation: displaySite 0s 2s forwards;
+  animation: displaySite 0s 2s forwards;
+}
+@keyframes displaySite {
+  to {
+    visibility: visible;
+  }
 }
 
 @media (min-width: 1025px) {

@@ -17,7 +17,7 @@ $color-tertiary: #99e2d0;
   border-top-color: $color-primary;
   border-right-color: $color-secondary;
   border-bottom-color: $color-tertiary;
-  animation: spin 1s linear infinite;
+  animation: spin 2s 0s linear forwards;
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -28,7 +28,12 @@ $color-tertiary: #99e2d0;
 }
 @keyframes spin {
   to {
+    transform: rotate(0deg);
+  }
+  to {
     transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .loader_icon {
